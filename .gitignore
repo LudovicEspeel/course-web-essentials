@@ -1,0 +1,4 @@
+readme.pdf
+node_modules/
+*.bin
+!library.bin
