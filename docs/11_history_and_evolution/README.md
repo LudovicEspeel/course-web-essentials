@@ -1,35 +1,35 @@
-# History en evolution of the internet and the web
+# History and evolution of the internet and the web
 
 ## 1950s
 
-Networks did not really exist. Computers existed out of large mainframes with many terminals. Connections where in permanent use by a terminal. Connections could not be shared. This principle is called point-to-point communication.
+Networks did not really exist. Computers existed out of large mainframes with many terminals. Connections were in permanent use by a terminal and could not be shared. This principle is called point-to-point communication.
 
 ![IMAGE](./images/image1.png)
 
 ## 1960-1970s
 
-Some networks existed but where local implementations.
+Some networks existed but were local implementations:
 
 * ARPANET
 * NPL
 * Merit Network
 * CYCLADES
 
-Computers where very expensive at the time. It would be desirable to be able to use a computer that was on a remote location or on the other side of the country. The idea arose to connect these computers and mainframes to a large network. The cold war also emerged the idea that a computer network could survive a nuclear war. Permanent point-to-point connections where impossible or to expensive. A new technique needed to be used to make the networks possible.
+Computers were very expensive at that time. It would be desirable to be able to use a computer that was on a remote location or on the other side of the country. The idea arose to connect these computers and mainframes to a large network. The cold war also emerged the idea that a computer network could survive a nuclear war. Permanent point-to-point connections were impossible or too expensive. A new technique needed to be used to make the networks possible.
 
-A technique called **packet switching** was used to connect multiple networks over a single cable. Some protocols where invented that made use of packet switching to join the networks together.
+A technique called **packet switching** was used to connect multiple networks over a single cable. Some protocols were invented that made use of packet switching to join the networks together.
 
 ![IMAGE](./images/image2.png)
 
-In a packet switched network, all data is split into small packets. Each packet must be routed from destination to source. The time when no data is send, the line is available for use of other packets from other sources and destinations. In this way there is no more need of expensive and inefficient point-to-point connections.
+In a packet switched network, all data is split into small packets. Each packet must be routed from destination to source. The time when no data is sent, the line is available for use of other packets from other sources and destinations. In this way there is no more need of expensive and inefficient point-to-point connections.
 
 ## 1982: TCP/IP
 
-TCP/IP is a set of protocols that make use of the packet switching principle. Although both protocols can be used separately. In almost any use case they come hand in hand.
+TCP/IP is a set of protocols that make use of the packet switching principle, although both protocols can be used separately. In almost any use case they come hand in hand.
 
 ### TCP: Transmission Control Protocol
 
-The TCP protocol enables for a reliable connection between to endpoints. It uses handshaking to confirm that data has reached the destination. If something would happen that prevents the data from reaching the destination, the protocol will be able to detect this.
+The TCP protocol enables for a reliable connection between two endpoints. It uses handshaking to confirm that data has reached the destination. If something would happen that prevents the data from reaching the destination, the protocol will be able to detect this.
 
 TCP also introduces the principle of `ports`. Each computer can use up to 65536 to listen to. Each port could be a different application or service that is made available to the other systems in the network. For example HTTP uses port 80 and email uses port 25. Using this principle a single computer can have both an HTTP server and SMTP (mail) server up and running.
 
@@ -48,11 +48,11 @@ The above combination of an IP address and a TCP port enables you to reach the c
 
 ## 1989: World Wide Web - www
 
-Before 1989 networks where limited to military, universities and research. In 1989 it was decided to allow commercial activities on the internet. Now that all companies where allowed to make use of the `internet`, there was an increse of investments and thus an increase in bandwidth. This resulted in an explosive growth of users.
+Before 1989, networks here limited to military, universities and research. In 1989 it was decided to allow commercial activities on the internet. Now that all companies were allowed to make use of the `internet`, there was an increase of investments and thus an increase in bandwidth. This resulted in an explosive growth of users.
 
 Until that time there was no uniform or standardized protocol to use the internet. Many protocol existed each with there own purpose and goal.
 
-At CERN, Tim Berners-Lee tackled the problem of accessing information. He created technologies for sharing information. These technologies are still in use of today.
+At CERN, Tim Berners-Lee tackled the problem of accessing information. He created technologies for sharing information. These technologies are still in use today:
 
 * HyperText Markup Language - HTML
 * HyperText Transfer Protocol - HTTP
@@ -62,15 +62,15 @@ At CERN, Tim Berners-Lee tackled the problem of accessing information. He create
 
 You can still find the very first webpage that was created at that time at [http://info.cern.ch/](http://info.cern.ch/)
 
-## HyperText Markup Language - HTML
+### HyperText Markup Language - HTML
 
 HyperText Markup Language - HTML was a way to add context and meaning to otherwise meaningless pieces of text. Some text may function as a title, other text is a paragraph in a set of other paragraphs and so on.
 
-## HyperText Transfer Protocol - HTTP
+### HyperText Transfer Protocol - HTTP
 
 Now that we have a way to markup documents we still need to share them and access them. The HyperText Transfer Protocol - HTTP is a protocol that enables the exchange of HTML documents over a computer network. It is a set of agreements on how to access a document.
 
-### Uniform Resource Locator - URL
+#### Uniform Resource Locator - URL
 
 HTTP provides a mean to exchange documents, be there is still need of a system that allow us to point to that document. An URL solves this problem by defining a unique string of names separated by slash `/` characters to identify documents on other nodes on a network.
 
@@ -96,9 +96,9 @@ The graphical way of browsing the internet led to an other explosive growth in i
 
 ## 1997-2000: Dot-com bubble
 
-The massive growth of the internet resulted in every company wanting to profit from the new technology. Suddenly everybody was able to access the internet, en thus every company wanted to be available through the internet.
+The massive growth of the internet resulted in every company wanting to profit from the new technology. Suddenly everybody was able to access the internet, and thus every company wanted to be available through the internet.
 
-To many financial investments and expectations resulted in an overgrowth, and many companies went in way to deep. This resulted in a collapse and decrease of thrust in the internet. This period is often remembered as *the dot com bubble*
+Too many financial investments and expectations resulted in an overgrowth, and many companies went in way to deep. This resulted in a collapse and decrease of thrust in the internet. This period is often remembered as *the dot com bubble*.
 
 ![IMAGE](./images/image5.png)
 
@@ -106,7 +106,7 @@ To many financial investments and expectations resulted in an overgrowth, and ma
 
 By 2004 the internet was changing from an information retrieval platform to a more interactive environment. At the time browsing the internet was an activity of mainly viewing and downloading information.
 
-A trend that was set by Google was that users of the internet could upload or post information back to the internet. This resulted in interactive websites. These websites where often called web 2.0, although there was never a new version of the internet released. The internet is a set of technologies and techniques.
+A trend that was set by Google was that users of the internet could upload or post information back to the internet (e.g. Blogger). This resulted in interactive websites (<-> static websites). These websites were often called web 2.0 (<-> web 1.0 for static websites), although there was never a new version of the internet released. The internet is a set of technologies and techniques.
 
 Some examples of web 2.0 websites:
 
@@ -118,8 +118,25 @@ Some examples of web 2.0 websites:
 
 ![IMAGE](./images/image6.png)
 
+After Web 2.0, there are other newer "versions" in circulation that offer even more possibilities:
+* Web 2.5: unofficial intermediate version
+    * Especially mobile & cloud computing: mobile apps and websites for users to connect them on any devices, anytime and anywhere.
+* Web 3.0: semantic web
+    * Web with the rise of Artificial Intelligence. Recognise people, places, events, ...
+    * E.g. Apple's Siri, Wolfram Alpha, ChatGPT, ...
+* Web 4.0: web OS
+    * At this moment, no clear explanation than: "make the internet more user-friendly, efficient, personalized, interactive, intelligent and collaborative".
+
+Remarks:
+* Approximately every decade, there is a new "version" of the web, though this is, of course, theoretical.
+* It's important to know that on the internet, we can have a mix: websites that adhere to Web 1.0, websites that adhere to Web 3.0, and so on.
+
 ## Internet of Things
 
-The next (r)evolution in the internet is called the Internet of Things or IoT. The IoT tries to connect the world to the internet. Everyday devices and things will have access to data on the internet. This will enable to make these things smarter by exchanging information with each other.
+The next (r)evolution in the internet is called the *Internet of Things* or *IoT*. 
 
-All these smart devices generate a massive amount of data. A new challenge that has raised is the management of this data and extracting valuable information. This is called big-data.
+![IMAGE](./images/image7.png)
+
+The IoT tries to connect the world to the internet. Everyday devices and things will have access to data on the internet. This will enable to make these things smarter by exchanging information with each other.
+
+All these smart devices generate a massive amount of data. A new challenge that has raised is the management of this data and extracting valuable information. This is called *big-data*.

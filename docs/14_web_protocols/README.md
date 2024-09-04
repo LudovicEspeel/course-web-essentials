@@ -1,14 +1,14 @@
 # Web protocols
 
-## HTTP Protocol
+## HTTP protocol
 
-A Protocol is a **system of rules** that allow two or more entities of a communications system to transmit information.
+A protocol is a **system of rules** that allow two or more entities of a communications system to transmit information.
 
-HTTP stands for HyperText Transfer Protocol. HTTP is protocol that enables *Client-Server* applications. It defines how `requests` and `responds` should look and is standardized in the HTTP protocol coordinated by the IETF - Internet Engineering Task Force.
+HTTP stands for HyperText Transfer Protocol. HTTP is a protocol that enables *client-server* applications. It defines how `requests` and `responds` should look and is standardized in the HTTP protocol coordinated by the IETF - Internet Engineering Task Force.
 
 ![IMAGE](./images/image21.png)
 
-In the protocol it is defined how **clients** can send *requests* and how **servers** should *respond*. The protocol consists out of plain text and is readable for humans. This makes debugging and understanding the process easy.
+In the protocol, it is defined how **clients** can send *requests* and how **servers** should *respond*. The protocol consists out of plain text and is readable for humans. This makes debugging and understanding the process easy.
 
 HTTP is build on top of the TCP/IP stack. By default, port `80` is reserved for HTTP. This is the standard port that is used when no port is provided. Any other port could be used as well, but must always be supplied when sending out requests using a browser or other software.
 
@@ -20,10 +20,10 @@ If some state must be retained, for example a user that logs in, HTTP *cookies* 
 
 The request message consists of the following:
 
-* A request line: for example `GET /images/logo.png HTTP/1.1`, which requests a resource called `/images/logo.png` from the server
-* One or more Request header fields (such as `Accept-Language: en`, …)
-* An empty line to indicate the end of the header
-* An optional message body
+* A request line: for example `GET /images/logo.png HTTP/1.1`, which requests a resource called `/images/logo.png` from the server.
+* One or more request header fields (such as `Accept-Language: en`, …).
+* An empty line to indicate the end of the header.
+* An optional message body.
 
 ```http
 GET / HTTP/1.1
@@ -73,13 +73,13 @@ X-Powered-By: PHP/5.5.16
 
 ### Try it yourself
 
-1. Open the developer tools in your browser
-2. Choose the ‘Network’ tab in the developer tools
-3. Visit a website, eg: www.vives.be
-4. Click on the initial request to view the details
+1. Open the developer tools in your browser.
+2. Choose the 'Network' tab in the developer tools.
+3. Visit a website, e.g. www.vives.be
+4. Click on the initial request to view the details.
 
 :::tip 💡Developer tools
-* In Chrome the keybind is `F12`
+* In Chrome (and most other browsers), the keybind is `F12`
 * In Opera the keybind is `CRTL+SHIFT+i`
 :::
 
@@ -87,37 +87,40 @@ X-Powered-By: PHP/5.5.16
 
 ## Getting documents over HTTP with clients and servers
 
-1. The user types the URL in the browser (client)
-2. The Browser translates the URL to a HTTP request
-3. The browser sends the HTTP request to the server
-4. The server generates a HTTP response containing the requested file
-    1. Find the requested file
-    2. Generate a HTTP response
-    3. Add the requested file to the HTTP response
+Steps:
+1. The user types the URL in the browser (client).
+2. The browser translates the URL to a HTTP request.
+3. The browser sends the HTTP request to the server.
+4. The server generates a HTTP response containing the requested file:
+    1. Find the requested file.
+    2. Generate an HTTP response.
+    3. Add the requested file to the HTTP response.
 5. The server sends the HTTP response back to the client
 6. The client processes the response and generates an output for the user
 
-The user types the URL in the browser (client)
+Illustrated example:
+
+The user types the URL in the browser (client):
 
 ![IMAGE](./images/image23.png)
 
-The Browser translates the URL to a HTTP request
+The browser translates the URL to a HTTP request:
 
 ![IMAGE](./images/image24.png)
 
-The browser sends the HTTP request to the server
+The browser sends the HTTP request to the server:
 
 ![IMAGE](./images/image25.png)
 
-The server generates a HTTP response containing the requested file
+The server generates a HTTP response containing the requested file:
 
 ![IMAGE](./images/image26.png)
 
-The server sends the HTTP response back to the client
+The server sends the HTTP response back to the client:
 
 ![IMAGE](./images/image27.png)
 
-The client processes the response and generates an output for the user
+The client processes the response and generates an output for the user:
 
 ![IMAGE](./images/image28.png)
 
@@ -127,9 +130,11 @@ The client processes the response and generates an output for the user
 
 ## DNS - Domain Name System
 
-> Domain Name System (DNS) is a hierarchical distributed naming system for computers, services, or any resource connected to the Internet Source: wikipedia
+> Domain Name System (DNS) is a hierarchical distributed naming system for computers, services, or any resource connected to the Internet 
+<br>
+Source: wikipedia
 
-Translates domain names, which can be easily memorized by humans, to the numerical IP addresses needed for the purpose of computer services and devices worldwide
-www.wikipedia.org --> 91.198.174.192
+Translates domain names, which can be easily memorized by humans, to the numerical IP addresses needed for the purpose of computer services and devices worldwide.
+`www.wikipedia.org --> 91.198.174.192`
 
 ![IMAGE](./images/image29.png)

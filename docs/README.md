@@ -1,4 +1,4 @@
-# Full Stack Webdevelopment
+# Web Essentials
 
 ![Netlify Status](https://api.netlify.com/api/v1/badges/2da24422-0bbe-45a8-a291-54c5d790d80f/deploy-status)
 
@@ -9,37 +9,42 @@ This course is still in development.
 ## Introduction
 
 This course is developed for PBA Electronics-ICT at [University College VIVES](https://www.vives.be/nl/technology/elektronica-ict).
-During this course you will learn the basics of HTML5, CSS3, Javascript, Typescript, Node.js, Express.js, Vue, MySQL, Docker, ... all tools to become a full stack developer.
+During this course you will learn the basics of HTML5, CSS3, JavaScript and Docker. 
+In the following course *Webscripting* (second year), you will learn TypeScript, advanced JavaScript, Node.js, Express.js, Vue, MySQL, ...
+After following both courses, you have the tools to become a full stack developer.
 
 ## Content
 
-1. Introduction to web development
-2. Frontend webdesign with HTML and CSS
-3. Frontend scripting with Javascript
-4. Backend databases with SQL
-5. Backend scripting with Express.js
-6. Frontend development
-7. Privacy regulations
-8. Deployment
+This course:
+* Introduction to web development
+* Frontend webdesign with HTML and CSS
+* Frontend scripting with Javascript
+* Deployment
+
+Next course (second year):
+* Backend databases with SQL
+* Backend scripting with TypeScript, advanced JavaScript, Express.js
+* Frontend development with Vue, Axios, Vuetify
+* Privacy regulations
+* Deployment
 
 ## Sources
 
 This work is the result of the knowledge of the writer & colleagues at VIVES University college:
 
-* Ronny Mees
-* Nico De Witte
-* Sille Van Landschoot
+* Ludovic Espeel
+* Ronny Mees, Sille Van Landschoot, Nico De Witte
 
 And professionally relevant sources such as:
 
-* W3Schools ( let op met deze bron, is niet up to date en bevat veel fouten)
+* W3Schools (be careful, some parts are outdated and can contain mistakes)
 * LinkedIn Learning
 * Youtube tutorials
 * Ferguson, R. (2019). Beginning JavaScript: The Ultimate Guide to Modern JavaScript Development.
 * Mozilla developer pagina
-* De github cursus van docent Rogier Van der Linde aan de hogeschool Odisee.
-* Blog van Matteo Duò op Kinsta i.v.m. responsive webdesign.
-* Blog van Michael J. Fordham op editorx i.v.m. cross-browser webdesign
+* Github course of lecturer Rogier Van der Linde at university college Odisee.
+* Blog Matteo Duò on Kinsta about responsive webdesign.
+* Blog Michael J. Fordham on editorx about cross-browser webdesign
 * Jon Duckett (2011). HTML & CSS: Design and build websites
 * Jon Duckett (2014). Javascript & Jquery: Interactive front-end web development
 * Jon Duckett (2022). PHP & MySQL: Server-side web development

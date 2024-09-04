@@ -12,10 +12,15 @@ We use Visual Studio Code to build our projects. If it is not already installed 
 
 Information about installing extensions can be found at the  [Visual Studio Code User's Guide](https://code.visualstudio.com/docs/editor/extension-marketplace).
 
+#### Preview on WebServer
+
+Launches a local development server with live reload feature for static & dynamic pages in the browser or side panel (live preview feature).
+
 #### Live server
 
-Launches a local development server with live reload feature for static & dynamic pages.
+Another local development server with live reload feature for static & dynamic pages in the browser.
 
+<!--
 #### Vue Language Features (Volar)
 
 Volar gives you syntax highlighting, TypeScript support, and intellisense for template expressions and component props within Vue components.
@@ -25,7 +30,7 @@ Volar gives you syntax highlighting, TypeScript support, and intellisense for te
 Node.js is an open-source, cross-platform Javascript runtime environment.
 
 Just install the current version from [nodejs.org](https://nodejs.org/en)
-
+-->
 ## Postman
 
 Postman is a API platform for testing your API applications. 

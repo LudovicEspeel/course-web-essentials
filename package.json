@@ -1,7 +1,7 @@
 {
-  "name": "fullstackdevelopment_eoict",
+  "name": "webessentials_eoict",
   "version": "0.0.1",
-  "description": "Cursus Full Stack Development PBA Elektronica ICT",
+  "description": "Course Web essentials PBA Elektronica-ICT",
   "main": "index.js",
   "directories": {
     "doc": "docs"
@@ -12,17 +12,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ronnymees/fullstackdevelopment_eoict"
+    "url": "git+https://github.com/LudovicEspeel/course-web-essentials"
   },
   "authors": {
-    "name": "Ronny Mees",
-    "email": "ronny.mees@vives.be"
+    "name": "Ludovic Espeel",
+    "email": "ludovic.espeel@vives.be"
   },
   "license": "MIT",
-  "homepage": "https://github.com/ronnymees/fullstackdevelopment_eoict#readme",
+  "homepage": "https://github.com/LudovicEspeel/course-web-essentials#readme",
   "devDependencies": {
     "@vuepress/plugin-container": "^2.0.0-beta.61",
-    "@vuepress/plugin-register-components": "^2.0.0-beta.61",    
+    "@vuepress/plugin-register-components": "^2.0.0-beta.61",
     "vuepress": "^2.0.0-beta.61"
   }
 }

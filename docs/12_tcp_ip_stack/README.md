@@ -6,13 +6,13 @@ When using the web, a couple of protocols are used to get everything working smo
 
 The IP protocol is the principle protocol for the internet. It **relays** datagrams across network boundaries. Routing functionality enables internetworking, this is what establishes the internet.
 
-The IP protocol enables delivery of packets form source to destination. It also defines packet structure that encapsulates the data.
+The IP protocol enables delivery of packets from source to destination. It also defines packet structure that encapsulates the data.
 
-The Internet Protocol Version 4 - IPv4 - is the dominant protocol of the internet. The 32bit addressing is reaching its limits, so a successor IPv6 - Internet Protocol Version 6 - is already standardized and in use. The migration from IPv4 to IPv6 will take many years to complete.
+The Internet Protocol Version 4 - IPv4 - is the dominant protocol of the internet. The 32- bit addressing is reaching its limits, so a successor IPv6 - Internet Protocol Version 6 - is already standardized and in use. The migration from IPv4 to IPv6 will take many years to complete.
 
 ### IPv4
 
-IPv4 uses 32-bit (four-byte) addresses and is limited to 4294967296 (2^32) addresses. It uses a **quad-dotted** representation
+IPv4 uses 32-bit (four-byte) addresses and is limited to 4 294 967 296 (2^32) addresses. It uses a **quad-dotted** representation
 
 ![IMAGE](./images/image7.png)
 
@@ -23,7 +23,10 @@ IPv6 is dealing with the long anticipated problem of the limited range of IPv4 a
 ![IMAGE](./images/image8.png)
 
 ::: tip 😄Fun fact
-2^128 = 3.40 x 10^38 different ip addresses are possible with IPv6. On earth there are around 10^20 till 10^24 grains of sand. In the observable universe, there are around 10^24 stars. This means that every grain of sand or every star in the universe can have 100 trillion ip addresses...
+2^128 = 3.40 x 10^38 different IP addresses are possible with IPv6. On Earth there are around 10^20 till 10^24 grains of sand. In the observable universe, there are around 10^24 stars. This means that every grain of sand or every star in the universe can have 340 trillion IP addresses...
+<!--
+3,4 x 10^38 / 10^24 = 3,4 x 10^14 = 340 biljoen (of 340.000.000.000.000) IP-adressen per zandkorrel of ster.
+-->
 :::
 
 > 🌐 Supporting learning material
@@ -32,54 +35,52 @@ IPv6 is dealing with the long anticipated problem of the limited range of IPv4 a
 
 ### IP Routing
 
-You want to visit facebook.com. The facebook.com server has the IP address `140.40.56.123` (got this address from the DNS server)
+Example: you want to visit facebook.com. The facebook.com server has the IP address `140.40.56.123` (got this address from the DNS server).
 
 Source: `192.168.1.100`
 Destination: `140.40.56.123`
 
 ![IMAGE](./images/image9.png)
 
-Where can I find this server with IP: `140.40.56.123`??? Let’s ask the home router (`192.168.1.1`)
+1. Let's ask the home router (`192.168.1.1`) from a device: where can I find this server with IP `140.40.56.123`?
 
-Nope, I don’t know where to find the IP `140.40.56.123`
-
-I will ask Belgacom…
-
-Note!!! NAT: Network Address Translation is used here to switch from a local network to the internet (source is changed to `82.83.46.52` instead of `192.168.1.100`) and visa versa when receiving the answer.
+2. Home router: nope, I don't know where to find the IP `140.40.56.123`. Let's ask the internet provider (Belnet, Proximus, Telenet, Orange, Scarlet, edpnet, dommel.com, ...): do you know where to find `140.40.56.123`?
 
 ![IMAGE](./images/image10.png)
 
-Belgacom do you know where to find `140.40.56.123`?
+Note: NAT: Network Address Translation is used here to switch from a local network to the internet (source is changed to `82.83.46.52` instead of `192.168.1.100`) and visa versa when receiving the answer.
+<br>
+<br>
 
-Nope, I only know where to find IP’s ranging from `82.0.0.0` to `82.255.255.255`
-
-I will ask it to the local regstery (for Belgium)
+3. Internet provider: nope, I only know where to find IP's ranging from `82.0.0.0` to `82.255.255.255`, I'll ask it to the local registry (for Belgium).
 
 ![IMAGE](./images/image11.png)
 
-Belgian registry does not know either so forwards the request to the European registry.
+4. Belgian registry does not know either so forwards the request to the European registry.
 
 ![IMAGE](./images/image12.png)
 
-European registry does not know either and forwards the request to the Regional Internet Registry.
+5. European registry does not know either and forwards the request to the Regional Internet Registry.
 
-The Regional Internet Registry does not know either, but does now somebody that might know it and forwards the packet to the American Registry that is responsible for all IP addresses that are between `100.0.0.0` and `199.255.255.255`
+6. The Regional Internet Registry does not know either, but knows someone who might, and forwards the packet to the American Registry, which is responsible for all IP addresses between `100.0.0.0` and `199.255.255.255`.
 
 ![IMAGE](./images/image13.png)
 
-The American Registry does not know either, but does now somebody that might know it and forwards the packet to the USA Registry that is responsible for all IP addresses that are between `140.0.0.0` and `149.255.255.255`.
+7. The American Registry does not know either, but knows someone who might, and forwards the packet to the USA Registry, which is responsible for all IP addresses between `140.0.0.0` and `149.255.255.255`.
 
 ![IMAGE](./images/image14.png)
 
-The USA Registry does not know either, but does now somebody that might know it and forwards the packet to the AT&T.
+8. The USA Registry does not know either, but knows someone who might, and forwards the packet to AT&T.
 
-AT&T knows where the server with IP `14.40.56.123` is and forwards the packet to the server.
+9. AT&T knows where the server with IP `14.40.56.123` is and forwards the packet to the server.
 
 ![IMAGE](./images/image15.png)
 
-With the `tracert` command you can test and take a look at the different routers that are between you and the server you want to connect to.
+With the `tracert` command you can test and take a look at the different routers that are between you and the server you want to connect to. 
 
 ![IMAGE](./images/image16.png)
+
+Note: the above screenshot dates back a few years ago. Some server names and IP addresses have changed in the meantime, and IPv6 is increasingly being used.
 
 > 🌐 Supporting learning material
 >
@@ -87,7 +88,7 @@ With the `tracert` command you can test and take a look at the different routers
 
 ## TCP - Transmission Control Protocol
 
-> The Transmission Control Protocol (TCP) provides reliable, ordered, and error-checked delivery of data between applications running on hosts communicating over an IP network Source: wikipedia
+> The Transmission Control Protocol (TCP) provides reliable, ordered, and error-checked delivery of data between applications running on hosts communicating over an IP network <br>Source: wikipedia
 
 ### TCP Handshake
 
@@ -100,8 +101,8 @@ To enable a reliable connection, a *7 way handshake* is used when creating a con
 
 ![IMAGE](./images/image17.png)
 
-1. The client sends a TCP-header with `SYN = 1`, a sequence number (to know the order of packets), source port and a destination port to the server.
-2. If there is a server listening on the destination address and the given port, it will respond with `SYN = 1`, `ACK = 1` and an aknowledge number x + 1 to confirm the first TCP packet.
+1. The client sends a TCP-header with `SYN = 1`, a sequence number (= to know the order of packets), source port and a destination port to the server.
+2. If there is a server listening on the destination address and the given port, it will respond with `SYN = 1`, `ACK = 1` and an acknowledge number x + 1 to confirm the first TCP packet.
 3. The client responds with a SYN = 0, ACK = 1 and an aknowledge number x + 1 together with the data needed to be send to the server.
 After correctly following the 3 steps, the connection gets `ESTABLISHED`.
 
@@ -114,13 +115,13 @@ At any moment, the client or server can request to close the connection. This is
 1. The initiator sends a packet containing a `FIN` flag to the receiver.
 2. The receiver sends an `ACK` flag back to the initiator.
 3. The receiver then sends a `FIN` flag to the initiator to indicate that it is ready to close the connection.
-4. The connection is then finnaly closed when the initiator sends back an `ACK` flag.
+4. The connection is then finally closed when the initiator sends back an `ACK` flag.
 
 #### TCP ports
 
-TCP also introduces the concept of ports. Port enable the protocol to distinguish between multiple types of packets that are received. This enables to isolate data between multiple applications on the server. A server can as wel host a HTTP server and a Mail server, just by listening to a different port on the same machine.
+TCP also introduces the concept of ports. Ports enable the protocol to distinguish between multiple types of packets that are received. This enables to isolate data between multiple applications on the server. A server can as well host a HTTP server and a Mail server, just by listening to a different port on the same machine.
 
-A port number is just a 16 bit number. This means that up to 65535 different applications can be hosted on a single machine, all isolated from each other.
+A port number is just a 16-bit number. This means that up to 65535 different applications can be hosted on a single machine, all isolated from each other.
 
 The first 1024 port numbers are regulated to have a fixed type of service being hosted on them. Ports 1024 - 65535 can be used for anything you want.
 
