@@ -2,13 +2,13 @@
     // Text colors
     --c-text: #2c3e50;
     --c-text-accent: #dc322f;
-    
+
     // Border colors
     --c-border: #eaecef;
-    
+
     // Code blocks colors
     --code-bg-color: #282c34;
-   
+
 
     // Badge component colors
     --c-badge-tip: #42b983;
@@ -21,11 +21,19 @@
     --content-width: 100%;
     --homepage-width: 100%;
 
-    
+
 }
 
 // plugin-back-to-top
 .back-to-top {
-   --back-to-top-color: #dc322f;
-   --back-to-top-color-hover: #DA5961;
+    --back-to-top-color: #dc322f;
+    --back-to-top-color-hover: #DA5961;
+}
+
+@media print {
+
+    /* Verberg de navigatiebalk tijdens het afdrukken */
+    .navbar {
+        display: none;
+    }
 }
