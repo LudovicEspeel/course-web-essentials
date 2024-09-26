@@ -8,7 +8,7 @@ The IP protocol is the principle protocol for the internet. It **relays** datagr
 
 The IP protocol enables delivery of packets from source to destination. It also defines packet structure that encapsulates the data.
 
-The Internet Protocol Version 4 - IPv4 - is the dominant protocol of the internet. The 32- bit addressing is reaching its limits, so a successor IPv6 - Internet Protocol Version 6 - is already standardized and in use. The migration from IPv4 to IPv6 will take many years to complete.
+The Internet Protocol Version 4 - IPv4 - is the dominant protocol of the internet. The 32-bit addressing is reaching its limits, so a successor IPv6 - Internet Protocol Version 6 - is already standardized and in use. The migration from IPv4 to IPv6 will take many years to complete.
 
 ### IPv4
 
@@ -31,7 +31,7 @@ IPv6 is dealing with the long anticipated problem of the limited range of IPv4 a
 
 > 🌐 Supporting learning material
 >
-> YouTube tutorial: [Why Do We Need IP Adresses?](https://www.youtube.com/watch?v=iGPXkxeOfdk)
+> YouTube tutorial: [Why Do We Need IP Addresses?](https://www.youtube.com/watch?v=iGPXkxeOfdk)
 
 ### IP Routing
 
@@ -84,7 +84,7 @@ Note: the above screenshot dates back a few years ago. Some server names and IP 
 
 > 🌐 Supporting learning material
 >
-> YouTube tutorial: [IP Adresseses and the Internet](https://www.youtube.com/watch?v=L6bDA5FK6gs)
+> YouTube tutorial: [IP Addresses and the Internet](https://www.youtube.com/watch?v=L6bDA5FK6gs)
 
 ## TCP - Transmission Control Protocol
 

@@ -56,7 +56,7 @@ We use the extension `ssh remote` in Visual Code to make a remote connection to 
 Start using a remote window by pressing the green button on the bottom left:
 ![Open a remote window](./images/remote-indicator.png)
 
-Now select `Connect to Host` and type `student@<Ip adress of your VM>`
+Now select `Connect to Host` and type `student@<Ip address of your VM>`
 
 ![Connect to host](./images/connecttohost.png)
 
@@ -81,4 +81,4 @@ The only thing left to do is deploying your website by starting the docker conta
 * To view logs : `docker compose ps`
 * To view a list of the containers : `docker compose ls`
 
-Now everyone connected to the `devbit` network can acces your website through it's IP adress.
+Now everyone connected to the `devbit` network can acces your website through it's IP address.

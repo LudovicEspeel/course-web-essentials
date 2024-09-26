@@ -21,7 +21,7 @@ To be able to connect to your VM you need to setup the connection with your GitH
 Open a `powershell` and connect to your VM:
 
 ```bash
-ssh student@<your-vm-ip-adress>
+ssh student@<your-vm-ip-address>
 ```
 *If asked if you want to continue just type `yes`.*
 

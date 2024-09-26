@@ -26,7 +26,7 @@ For this we use a `index.html` file with the following content:
     <script defer src="./resources/js/script.js"></script>
 </head>
 <body>
-    <button onclick="getIp()">Get My Ip Adress</button>
+    <button onclick="getIp()">Get My Ip Address</button>
     <p id="ip"></p>
     <p id="isp"></p>    
     <p id="coordinates"></p>
@@ -56,9 +56,9 @@ async function getIp(){
     let response = await fetch('https://ipinfo.io/json?token=<your-token>');
     let ipinfo = await response.json();
     console.log(ipinfo);
-    document.getElementById('ip').textContent=`Jouw IP-adres is ${ipinfo.ip} [ ${ipinfo.hostname} ]`;
-    document.getElementById('isp').textContent=`Je internet service provider is ${ipinfo.org}`;    
-    document.getElementById('coordinaten').textContent=`Je locale verbindng bevind zich op de coordinaten ${ipinfo.loc}`;
+    document.getElementById('ip').textContent=`Your IP-address is ${ipinfo.ip} [ ${ipinfo.hostname} ]`;
+    document.getElementById('isp').textContent=`Your internet service provider is ${ipinfo.org}`;    
+    document.getElementById('coordinaten').textContent=`Your local connnection has coordinates ${ipinfo.loc}`;
 }
 ```
 

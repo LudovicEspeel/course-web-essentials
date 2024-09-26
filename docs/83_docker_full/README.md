@@ -73,7 +73,7 @@ services:
     ports:
       - 80:80
     environment:
-      - VUE_APP_API_HOST=<your server ip-adress>:3000
+      - VUE_APP_API_HOST=<your server ip-address>:3000
 volumes:
   db:
 ``` 
@@ -248,7 +248,7 @@ To exit just type `exit`.
 
 #### Create a user for the application
 
-In your browser open PHPmyAdmin by surfing to `<ip-adres-of-your-vm>:8080` and run the following sql-statement:
+In your browser open PHPmyAdmin by surfing to `<ip-address-of-your-vm>:8080` and run the following sql-statement:
 
 ```sql
 USE vives;
