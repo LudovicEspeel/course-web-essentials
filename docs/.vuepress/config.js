@@ -2,17 +2,18 @@ import { containerPlugin } from '@vuepress/plugin-container'
 import { defaultTheme } from '@vuepress/theme-default'
 import { registerComponentsPlugin } from '@vuepress/plugin-register-components'
 import { path } from '@vuepress/utils'
+import codeCopyPlugin from '@snippetors/vuepress-plugin-code-copy'
 
 module.exports = {
   lang: 'en-US',
   title: 'Course Web Essentials - Professional Bachelor Elektronica-ICT',
   description: 'Course Web essentials',
-  
+
   theme: defaultTheme({
     logo: '/files/afbeelding1.png',
     navbar: [
       { text: 'Home', link: '/' },
-      { text: 'Organization', link: 'https://www.vives.be' },      
+      { text: 'Organization', link: 'https://www.vives.be' },
       { text: 'Contact', link: 'mailto:ludovic.espeel@vives.be' }
     ],
     sidebar: [
@@ -20,9 +21,9 @@ module.exports = {
         text: 'Development Tools',
         collapsible: true,
         children: [
-          '/01_developmenttools/README.md',          
+          '/01_developmenttools/README.md',
         ]
-      },{
+      }, {
         text: 'Introduction',
         collapsible: true,
         children: [
@@ -32,7 +33,7 @@ module.exports = {
           '/14_web_protocols/README.md',
           '/15_internet_of_things/README.md',
         ]
-      },{
+      }, {
         text: 'Frontend Webdesign',
         collapsible: true,
         children: [
@@ -43,7 +44,7 @@ module.exports = {
           '/25_online_styles/README.md',
           '/26_deploy_website/README.md',
         ]
-      },{
+      }, {
         text: 'Frontend Scripting',
         collapsible: true,
         children: [
@@ -82,6 +83,7 @@ module.exports = {
         },
       },
     }),
+    codeCopyPlugin({ staticIcon: true }),
     registerComponentsPlugin({
       componentsDir: path.resolve(__dirname, './components'),
     }),
