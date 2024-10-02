@@ -3,9 +3,9 @@
 For Frontend Webdesign & scripting we will be using the following folder structure:
 
 ```
-ROOT                    | project folder
+ROOT                    | Project folder
 ├── resources
-│   ├── css             | your own CSS files 
+│   ├── css             | Your own CSS files 
 │   │   ├── **/*.css
 │   ├── images
 │   │   ├── **/*.*      | All image files
