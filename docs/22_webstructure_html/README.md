@@ -6,7 +6,7 @@
 >
 > Cheatsheet: [Cheatsheet HTML](/files/cheatsheet_html.pdf)
 
-The structure of a web page is created using HTML, which is the standard **markup language** for creating web pages. HTML stands for **H**yper **T**ext **M**arkup **L**anguage. It describes the structure of a web page based on HTML elements that tell the browser how the page content is structured.
+The structure of a created web page is using HTML, which is the standard **markup language** for creating web pages. HTML stands for **H**yper **T**ext **M**arkup **L**anguage. It describes the structure of a web page based on HTML elements that tell the browser how the page content is structured.
 
 HTML elements, also called **tags**, are like containers. They tell something about the information inside their **opening tag** and **closing tag**.
 
@@ -66,10 +66,10 @@ For example:
 
 * The `<meta>` charset element indicates which character set is used.
 * The `<meta>` description element captures the description for the web page.
-* The `<meta>` keywords element determines search terms for the web page on search engines such as google.
+* The `<meta>` keywords element determines search terms for the web page on search engines such as Google.
 * The `<meta>` author element determines the author of the web page.
 * The `<meta>` refresh element specifies how much time the page will refresh itself.
-* The `<meta>` viewport element instructs the browser to take device width into account when displaying elements on the page.
+* The `<meta>` viewport element instructs the browser to take the device width into account when displaying elements on the page.
 
 The visible part of the HTML document can be found between `<body>` and `</body>`.
 
@@ -237,9 +237,9 @@ A descriptive list is a list of terms, each with a description of the term. The 
 
 Links can be found on almost every web page, they enable the user to navigate the site. An HTML link is a hyperlink that allows you to jump to another document. When the cursor hovers over such a link, it changes into a hand.
 
-Hyperlinks are indicated in HTML with the `<a>` element and follow the following syntax `<a href="url">link text</a>`. Where URL stands for **U**niform **R**esource **L**ocator better known as web address.
+Hyperlinks are indicated in HTML with the `<a>` element and follow the following syntax `<a href="url">link text</a>` where URL stands for **U**niform **R**esource **L**ocator, better known as web address.
 
-Yes can use an absolute URL for a file that is not from your own site.
+We can even use an absolute URL for a file that is not from your own site.
 
 ```html
 <a href="http://www.vives.be">University College VIVES</a>
@@ -289,7 +289,7 @@ You can then refer to that ID in your URL.
 To do this, put `mailto:` in your URL followed by the email address.
 
 ```html
-<a href="mailto:ronny.mees@vives.be">Email Ronny Mees</a>
+<a href="mailto:ludovic.espeel@vives.be">Email Ludovic Espeel</a>
 ```
 
 ### Media
@@ -341,17 +341,17 @@ You can add video to your web page as follows:
 
 #### Embedded media
 
-You can add media such as eg youtube, google maps, google trents, ... to your web page with `iframe`, go to the source and copy the embed code.
+You can add media such as e.g. YouTube, Google Maps, Google Trends, ... to your web page with `iframe`, go to the source and copy the embed code.
 
 ### Tables
 
 Only use a table if the meaning is in danger of being lost without the table.
 
-eg Here you can hardly do anything else than to use a table:
+E.g. here you can hardly do anything else than to use a table:
 
 ![image](./images/image2.png)
 
-An HTML table can be recognized by the `<table>` element. Each row to the `<tr>` element and a header to the `<th>` element. A cell is then defined with the `<td>` element. A caption can be added immediately below the table with the `<caption>` element.
+An HTML table can be recognized by the `<table>` element. Each row is defined with the `<tr>` element and a header is defined with the `<th>` element. A cell is then defined with the `<td>` element. A caption can be added immediately above the table with the `<caption>` element.
 
 ```html
 <table>
@@ -441,9 +441,9 @@ A `<form>` element defines a part in a page where user input is expected.
 
 The most important element is the `<input>` element. It can be displayed in different ways depending on the `type` attribute used.
 
-*Text / password*
+***Text/password field***
 
-A 1-line text input field.
+A one-line text input field.
 
 ```html
 Firstname:<br>
@@ -455,7 +455,7 @@ Firstname:<br>
 </form>
 ```
 
-*Submit/reset button*
+***Submit/reset button***
 
 A submit or reset button for the form.
 
@@ -470,7 +470,7 @@ A submit or reset button for the form.
 </form>
 ```
 
-*Radio button or check box*
+***Radio button or check box***
 
 You can use a radio button or checkbox to allow a selection between elements.
 
