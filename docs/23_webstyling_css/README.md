@@ -522,3 +522,8 @@ ul {
 }
 ```
 
+## CSS validation
+Sometimes your webpage may not display correctly in the browser as expected. Additionally, there may be differences in how your webpage appears across different browsers. Possible causes:
+* Although CSS has been standardized by [W3C](https://www.w3.org), some CSS features, especially newer ones, may not be supported or correctly interpreted by the browser. 
+  * Note: CSS3 is still being developed, new features are occasionally added but not immediately supported by all browsers.
+* More likely, there are certain **syntax errors** in your CSS code. However, the browser will never show error messages for syntax errors! Instead, it tries to render something from your code. **This is why it's important to validate your CSS code too, which can be done using the [W3C CSS Validator](https://jigsaw.w3.org/css-validator).** A valid HTML document with valid CSS code provides a better guarantee that the webpage will be displayed correctly in different browsers.
