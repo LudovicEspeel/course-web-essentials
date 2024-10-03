@@ -164,9 +164,10 @@ Some commonly used characters:
 * `&copy;` - copyright
 * `&reg;` - registered
 * `&euro;` - euros
+* `&nbsp;` - non-breaking space
 
 ::: warning 🔥Note
-Do not use `-` in html text but rather `&ndash;`, `&mdash;` or `&minus;` depending on the context.
+Do not use `-` in html text but rather `&ndash;`, `&mdash;` or `&minus;` depending on the context. <br>The same for `<`, `>` and `&`, use `&lt;`, `&gt;` and  `&amp;`
 :::
 
 #### Quotes
@@ -523,7 +524,7 @@ With the `<legend>` element you can give a title to the group.
 </fieldset>
 ```
 
-### Button
+#### Button
 
 The `<button>` element represents a clickable button.
 
