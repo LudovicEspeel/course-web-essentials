@@ -346,7 +346,7 @@ You can add media such as e.g. YouTube, Google Maps, Google Trends, ... to your 
 
 ### Tables
 
-Only use a table if the meaning is in danger of being lost without the table.
+Only use a table if the meaning is in danger of being lost without the table. Do not use a table to create the entire layout of your website!
 
 E.g. here you can hardly do anything else than to use a table:
 
@@ -411,9 +411,9 @@ To make a cell span several rows we use the `rowspan` attribute.
 
 The container element can be used to group elements in your HTML document.
 
-#### DIV
+#### Div
 
-A `<DIV>` element is typically used to group elements and format them.
+A `<div>` element is typically used to group elements and format them.
 
 ```html
 <div>
@@ -422,17 +422,17 @@ A `<DIV>` element is typically used to group elements and format them.
 </div>
 ```
 
-#### SPAN
+#### Span
 
-A `<span>` element can also group HTML elements and is usually used to display part of a text in a certain format.
+A `<span>` element can only contain text as content and is usually used to display a part of a text in a certain format.
 
-#### SECTION
+#### Section
 
-A `<section>` element can be used to indicate a section or chapter of a page.
+A `<section>` element can be used to indicate a section or chapter of a page. The first element below the `<section>` element must start with a heading element (`h1` to `h6`) followed by for example a `p` element.
 
 #### Horizontal line
 
-The `<hr>` element represents a split in the document in a visually separate manner.
+The `<hr>` element represents a thematic break or division in the content, often rendered visually as a horizontal line.
 
 ### Forms
 
@@ -447,7 +447,6 @@ The most important element is the `<input>` element. It can be displayed in diff
 A one-line text input field.
 
 ```html
-Firstname:<br>
 <form>
    Username:<br>
    <input type="text" name="username"><br>

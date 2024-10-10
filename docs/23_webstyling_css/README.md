@@ -190,7 +190,7 @@ p.center {
 
 #### 5. Grouped selector
 
-Here all `h1`, `h2`, and `p` elements are selected:
+Here all `<h1>`, `<h2>`, and `<p>` elements are selected:
 ```css
 h1, h2, p {
    text-align: center;
@@ -289,10 +289,10 @@ You can freely use the following units interchangeably:
 
 | Unit  | Type       | Relationship                  | Example               |
 | ----- | ---------- | ----------------------------- | --------------------- |
-| px    | absolute   | screen pixels                 | p {font-size: 14px}    |
-| em    | percentage | % of parent element font size | p {font-size: 1.2em}   |
-| brake | percentage | % of root element font size   | p {font-size: 0.75rem} |
-| %     | percentage | % of parent size or font size | .left {width: 20%}    |
+| px    | absolute   | screen pixels                 | p { font-size: 14px }    |
+| em    | percentage | % of parent element font size | p { font-size: 1.2em }   |
+| brake | percentage | % of root element font size   | p { font-size: 0.75rem } |
+| %     | percentage | % of parent size or font size | .left { width: 20% }    |
 
 ## CSS properties
 
