@@ -28,7 +28,7 @@ img {
 }
 ```
 
-Or we can target a specific class, “full-width-img” by adding a dot beforehand.
+Or we can target a specific class "full-width-img" by adding a dot beforehand.
 
 ```css
 .full-width-img {
@@ -36,7 +36,7 @@ Or we can target a specific class, “full-width-img” by adding a dot beforeha
 }
 ```
 
-You can also edit the design on other aspects besides height, width and color. Using CSS in this way makes a design responsive when you combine it with a technique called “media query”.
+You can also edit the design on other aspects besides height, width and color. Using CSS in this way makes a design responsive when you combine it with a technique called "media query".
 
 ### Media queries
 
@@ -55,7 +55,7 @@ You can compare it to an "if" clause found in some programming languages, as it 
 }
 ```
 
-If the screen is at least 780 pixels wide, images with the “full-width-img” class will use 90% of the screen and will be automatically centered in equal margins on both sides.
+If the screen is at least 780 pixels wide, images with the "full-width-img" class will use 90% of the screen and will be automatically centered in equal margins on both sides.
 
 ### Fluid layouts
 
@@ -108,12 +108,12 @@ To work with media queries, you need to think about “responsive breakpoints”
 ### Common screen sizes
 
 * Mobile: 360 x 640
-* Mobile: 375x667
+* Mobile: 375 x 667
 * Mobile: 360 x 720
-*iPhone X: 375x812
-* Pixel 2: 411x731
-* Tablet: 768x1024
-*Laptop: 1366x768
+* iPhone X: 375 x 812
+* Pixel 2: 411 x 731
+* Tablet: 768 x 1024
+* Laptop: 1366 x 768
 * High-res laptop or desktop: 1920 x 1080
 
 If you choose a mobile-first approach, with one column and smaller fonts than the base layout, you don't need to implement mobile limits unless you want to optimize the design for specific models.
@@ -142,42 +142,38 @@ The first and most important step is to set different sizes for the different el
 Of course, the number of layout containers you have will depend on your design, but most websites focus on the elements below:
 
 * Wrapper or container
-* header
+* Header
 * Content
 * Sidebar
 * Footer
 
 ![download](./images/image5.png)
 
-With a mobile-first approach, you can first style the most important elements in the layout (note: does not contain a media query for the simplest style you use for a standard smartphone in normal mode):
+With a mobile-first approach, you can first style the most important elements in the layout (note: it does not contain a media query for the simplest style you use for a standard smartphone in normal mode):
 
 ```css
-#wrapper{width:95%; margin: 0 auto; }
-#header{width:100%; }
-#content{width:100%; }
-#sidebar {width:100%; }
-#footer{width:100%; }
+#wrapper { width:95%; margin: 0 auto; }
+#header { width:100%; }
+#content { width:100%; }
+#sidebar { width:100%; }
+#footer { width:100%; }
 
-// Small devices (landscape phones, 576px and up)
-
+/* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) { ... }
 
-// Medium devices (tablets, 768px and up)
-
+/* Medium devices (tablets, 768px and up) */
 @media (min width: 768px) {
-   #wrapper {width:90%; margin: 0 auto; }
-   #content{width:70%; float:left; }
-   #sidebar {width:30%; float: right; }
+   #wrapper { width:90%; margin: 0 auto; }
+   #content { width:70%; float: left; }
+   #sidebar { width:30%; float: right; }
 }
 
-// Large devices (desktops, 992px and up)
-
+/* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) { ... }
 
-// Extra large devices (large desktops, 1200px and up)
-
+/* Extra large devices (large desktops, 1200px and up) */
 @media (min width: 1200px) {
-   #wrapper {width:90%; margin: 0 auto; }
+   #wrapper { width:90%; margin: 0 auto; }
 }
 ```
 
@@ -199,20 +195,18 @@ But with this you still ask quite a lot of mobile visitors when they visit your 
 
 Make sure you always use a `srcset` with different sizes of your images before adding images to your pages.
 
-Doing this manually takes quite a bit of time, but with a CMS like WordPress this is done automatically when you upload media files.
-
 #### Responsive fonts for your website text
 
-The main focus of responsive web design often focuses on the responsiveness of the layout blocks, elements, and media. Only then do people (perhaps) think about the text again.
+The main focus of responsive web design often focuses on the responsiveness of the layout blocks, elements, and media. Only afterwards do people (perhaps) think about the text again.
 
 But if you really want good responsive design, you also have to adjust the size of your font so that it adapts to the screen size.
 
-The easiest way to do this is to set a static value for the font size, such as 22 px, and adjust it for each media query
+The easiest way to do this is to set a static value for the font size, such as 22 px, and adjust it for each media query.
 
 You can target multiple text elements at once by using a comma to list elements.
 
 ```css
-@media (min width: 992px) {
+@media (min-width: 992px) {
    body, p, a, h4 {
      font-size: 14px;
    }
@@ -221,7 +215,7 @@ You can target multiple text elements at once by using a comma to list elements.
 
 ## Cross browser web design
 
-The websites you create should look great and leave a strong impression on customers and users, whether they use Opera, Chrome, Safari or anything else.
+The websites you create should look great and leave a strong impression on customers and users, whether they use Chrome, Edge, Opera, Safari or anything else.
 
 Cross browser compatibility is an often overlooked step when creating a new website. Often the designers and developers use only one browser to create the site, and they may quickly check it on a handful of other browsers before they consider the project complete. This may suffice for simple sites that aren't business critical, but if you're building more complex sites, your site may look very different on other browsers.
 
@@ -248,7 +242,7 @@ At the beginning of your HTML file(s), you define the language the code is writt
 
 Wrong HTML and CSS code can cause your website to misbehave in different ways across all browsers. The bugs can be hard to spot and the web page will still typically build up with small, seemingly random issues which in turn make it difficult to debug.
 
-One way to avoid this is to validate your code. You can validate [HTML](https://validator.w3.org/#validate_by_input+with_options) and [CSS](https://jigsaw.w3.org/css-validator/#validate_by_input) with the W3C validators, or install extensions in your IDE that check your code as you write it.
+One way to avoid this is to validate your code. You can validate [HTML](https://validator.w3.org) and [CSS](https://jigsaw.w3.org/css-validator) with the W3C validators, or install extensions in your IDE that check your code as you write it.
 
 #### Use a CSS reset
 
@@ -280,9 +274,9 @@ time, mark, audio, video {
 
 #### Check support for your CSS properties
 
-Different browsers don't all support the same CSS properties, so what's perfectly usable in one browser may not exist in another. For example, the backdrop-filter property is fully supported by Chrome, but is non-existent in Firefox. If you rely on it, it will be unexpected behavior for your Firefox users.
+Different browsers don't all support the same CSS properties (especially new ones), so what's perfectly usable in one browser may not exist in another. For example, the `backdrop-filter` property was initially only supported by Chrome and Edge and not by Firefox (note: it's now available in recent versions). If you rely on it, it will be unexpected behavior for your Firefox users.
 
-Tools like [Can I Use](https://caniuse.com/) allow you to check CSS properties for their browser support. This means you won't waste a lot of time designing with a poorly supported property only to have to redevelop it later.
+Tools like [Can I Use](https://caniuse.com) allow you to check CSS properties for their browser support. This means you won't waste a lot of time designing with a poorly supported property only to have to redevelop it later.
 
 #### Create responsive websites
 
@@ -301,4 +295,4 @@ There may be cases where we cannot avoid using a feature that is not fully suppo
 
 #### Take advantage of cloud-based browser testing
 
-In an ideal world, you would be able to personally test your website on many different devices and browsers. But in smaller teams this may not be possible, so you might want to look into cloud-based browser tests where your website can run on many different combinations of browsers at the same time. [LambdaTest](https://www.lambdatest.com/),[BrowserStack](https://www.browserstack.com/) and [SmartBear](https://smartbear.com/ppc/testcomplete/web-testing/) all provide the ability to test cross-browser compatibility quickly and efficiently.
+In an ideal world, you would be able to personally test your website on many different devices and browsers. But in smaller teams this may not be possible, so you might want to look into cloud-based browser tests where your website can run on many different combinations of browsers at the same time. [LambdaTest](https://www.lambdatest.com/), [BrowserStack](https://www.browserstack.com/) and [SmartBear](https://smartbear.com/ppc/testcomplete/web-testing/) all provide the ability to test cross-browser compatibility quickly and efficiently. These websites require an account and are unfortunately not free (though they offer a free trial period).

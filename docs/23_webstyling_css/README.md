@@ -52,7 +52,7 @@ This `.css` file must then of course be linked to the HTML page in the `head` se
 <link rel="stylesheet" type="text/css" href="/styles/style.css">
 ```
 
-::: warning 🔥'Good practice'
+::: warning 🔥Good practice
 Working with an external CSS file is preferred, so we will use this method as much as possible for this course.
 :::
 
@@ -60,7 +60,7 @@ Working with an external CSS file is preferred, so we will use this method as mu
 If you want to use multiple style sheets and do not want to overload your HTML code with them, you can place the link to your master `style.css` file in your html code and then import the others into your `style.css`.
 
 ```css
-@import "/styles/forms.css"
+@import "forms.css"
 
 body {
    background-color: #334455;
@@ -289,10 +289,10 @@ You can freely use the following units interchangeably:
 
 | Unit  | Type       | Relationship                  | Example               |
 | ----- | ---------- | ----------------------------- | --------------------- |
-| px    | absolute   | screen pixels                 | p { font-size: 14px }    |
-| em    | percentage | % of parent element font size | p { font-size: 1.2em }   |
-| brake | percentage | % of root element font size   | p { font-size: 0.75rem } |
-| %     | percentage | % of parent size or font size | .left { width: 20% }    |
+| px    | absolute   | screen pixels                 | `p { font-size: 14px }`    |
+| em    | percentage | % of parent element font size | `p { font-size: 1.2em }`   |
+| rem   | percentage | % of root element font size   | `p { font-size: 0.75rem }` |
+| %     | percentage | % of parent size or font size | `.left { width: 20% }`    |
 
 ## CSS properties
 
@@ -321,7 +321,7 @@ With the CSS **border** property you can set the style, thickness and color of a
 
 ```css
 p {
-   border style: solid;
+   border-style: solid;
 }
 ```
 
@@ -461,7 +461,7 @@ table {
    width: 100%;
 }
 
-th, td{
+th, td {
    border: 1px solid black;
    height: 50px;
    text-align: center;
@@ -475,7 +475,7 @@ th, td{
 You can of course completely style an input field, a nice fact is that you can also provide it with an icon.
 
 ```css
-input#email{
+input#email {
    background-image: url("images/email.png");
 }
 ```
@@ -495,7 +495,7 @@ li {
 span {
    display: block;
 }
-/* remove the element */
+/* don't show the element */
 h1.hidden {
    display: none;
 }
@@ -518,7 +518,7 @@ div.ex2 {
 The CSS **float** property allows an element to float.
 
 ```css
-/*image floating on the right*/
+/* image floating on the right */
 img {
    float: right;
 }
