@@ -12,21 +12,21 @@ Bootstrap CSS is the leading CSS framework for developing responsive and mobile-
 
 ### Downloading from Bootstrap
 
-To do this, go to [Bootstrap](https://getbootstrap.com/docs/4.6/getting-started/download/) and download the Compiled version of Bootstrap. Unpack the Zip file in the root of your website and simply rename the folder 'Bootstrap'.
+To do this, go to [Bootstrap](https://getbootstrap.com/docs/4.6/getting-started/download/) and download the Compiled version of Bootstrap. Unpack the Zip file and simply put the files below the right folder in your project.
 
 ### Loading Bootstrap
 
 To load Bootstrap you proceed in a similar way to your own CSS file.
 
 ```html
-<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="global/css/bootstrap.min.css">
 ```
 
 If you also want to use the JavaScript part of Bootstrap add the following in the footer of your html.
 
 ```html
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-<script src="bootstrap/js/bootstrap.min.js"></script>
+<script src="global/js/bootstrap.min.js"></script>
 ```
 
 ### A selection of the many Bootstrap components

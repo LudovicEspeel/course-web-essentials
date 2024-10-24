@@ -3,17 +3,17 @@
 ![image](./images/image1.png)
 
 You've spent hours building your website and now it needs to be posted publicly.
-First and foremost you need a Web Host for this.
+First and foremost you need a web host for this.
 
-## Find a suitable Web Host
+## Find a suitable web host
 
-### Shared Web Hosts
+### Shared web hosts
 
 Your first option is to use one of the popular hosting platforms such as Combell, One, Neostrada and Argeweb. The actual server where your website is stored is owned by the hosting service and is shared with other websites.
 
 Shared hosting is an affordable option, but it also has drawbacks such as slow page load times or downtime. Some platforms also limit RAM and CPU usage, which can lead to performance issues for your website.
 
-### Managed Web Hosts
+### Managed web hosts
 
 Managed hosting, in short, means that the hosting company such as Nucleus or Hostnet handles the setup, administration and maintenance of the servers.
 
@@ -29,7 +29,7 @@ If you don't have the resources to manage regular backups, security scans, and o
 
 ## Upload files and test
 
-Now that you have a Web Host you can upload your files and folder structure.
+Now that you have a web host you can upload your files and folder structure.
 
 Before you publish the website effectively, it is wise to test the website thoroughly in a small group or in preview mode.
 
@@ -49,7 +49,7 @@ To submit your website to Google, use [Google Search Console](https://search.goo
 
 ## Search Engine Optimization (SEO)
 
-The core of SEO is figuring out what terms people are likely to enter into a search engine to find your site and then using those terms in the right places on your site to increase the likelihood that search engines will display a link to your site in their Results.
+The core of SEO is figuring out what terms people are likely to enter into a search engine to find your site and then using those terms in the right places on your site to increase the likelihood that search engines will display a link to your site in their results.
 
 To determine who comes first in search results, search engines don't just look at what's on your site. They also look at how many sites link to you (and how relevant those links are). For this reason, SEO is often split into two areas: on-page techniques and off-page techniques.
 
@@ -74,7 +74,7 @@ Getting other sites to link to your site is just as important as on-page techniq
      The name of a URL can contain important keywords.
 3. Headers
 
-     You can also process keywords in a title
+     You can also process keywords in a title.
 4. Text
 
      If you repeat keywords at least 2 to 3 times in your text, this will also be picked up, but do not overdo it with these repetitions.
