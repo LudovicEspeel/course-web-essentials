@@ -1,14 +1,14 @@
-# Frontend scripting with Javascript
+# Frontend scripting with JavaScript
 
 > 🌐 Supporting learning material
 >
-> Javascript book: Ferguson, R. (2019). Beginning JavaScript: The Ultimate Guide to Modern JavaScript Development. [Link](https://limo.libis.be/primo-explore/fulldisplay?docid=TN_springer_s978-1-4842-4395-4_313453&context=PC&vid=VIVES_KATHO&search_scope=ALL_CONTENT&tab=all_content_tab&lang=nl_BE:) (you must first log in via [ limo](http://limo.libis.be/index.html#/vives) before you can use this link)
+> JavaScript book: Ferguson, R. (2019). Beginning JavaScript: The Ultimate Guide to Modern JavaScript Development. [Link](https://limo.libis.be/primo-explore/fulldisplay?docid=TN_springer_s978-1-4842-4395-4_313453&context=PC&vid=VIVES_KATHO&search_scope=ALL_CONTENT&tab=all_content_tab&lang=nl_BE:) (you must first log in via [ limo](http://limo.libis.be/index.html#/vives) before you can use this link)
 >
 > Developer webpage: [Mozilla](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 >
-> LinkedIn Learning Course: [Learning the Javascript Language](https://www.linkedin.com/learning/learning-the-javascript-language-2/)
+> LinkedIn Learning Course: [Learning the JavaScript Language](https://www.linkedin.com/learning/learning-the-javascript-language-2/)
 > 
-> LinkedIn Learning Course: [Validating and processing Forms with Javascript - chapters 1-3](https://www.linkedin.com/learning/validating-and-processing-forms-with-javascript-and-php)
+> LinkedIn Learning Course: [Validating and processing Forms with JavaScript - chapters 1-3](https://www.linkedin.com/learning/validating-and-processing-forms-with-javascript-and-php)
 
 
 **JavaScript** (JS) is a lightweight, interpreted programming language with top-notch features. Although best known as the web page scripting language, it is also used by many non-browser environments, such as node.js.
@@ -17,15 +17,15 @@ The standard for JavaScript is ECMAScript. As of 2012, all modern browsers fully
 
 Don't confuse JavaScript with the Java programming language. Both "Java" and "JavaScript" are trademarks or registered trademarks of Oracle in the US and other countries. In contrast, the two programming languages ​​have very different syntax, semantics, and applications.
 
-Javascript allows web pages to be made more interactive by accessing and modifying the content and layout of a web page while the page is being viewed in the browser. i.e. Javascript allows you to make a web page **dynamic** so that it responds to what the user does. Every action that needs to be done takes place via a **script** and is processed by the browser, so on the **client-side**.
+JavaScript allows web pages to be made more interactive by accessing and modifying the content and layout of a web page while the page is being viewed in the browser. i.e. JavaScript allows you to make a web page **dynamic** so that it responds to what the user does. Every action that needs to be done takes place via a **script** and is processed by the browser, so on the **client-side**.
 
 ## Troubleshooting
 
 When we write code it is usually by trial and error. Making mistakes is part of the coding proces.
 We distinguish two types of errors:
 
-* **Syntax errors**: These are errors where the Javascript syntax is not correct. Usually these are typos or bits we forgot.
-* **Logic errors**: Here the syntax of Javascript is correct but the result is not what we expected or intended. The fault lies in the logic of our program, which is more difficult to figure out.
+* **Syntax errors**: These are errors where the JavaScript syntax is not correct. Usually these are typos or bits we forgot.
+* **Logic errors**: Here the syntax of JavaScript is correct but the result is not what we expected or intended. The fault lies in the logic of our program, which is more difficult to figure out.
 
 Fortunately, our browser has a development environment that can help us with this. For Google Chrome you open this via `F12` and in Safari you can open this via the `Develop > Show Web Inspector` menu.
 
@@ -63,9 +63,9 @@ Specifically **Cross-Site Scripting Attacks** (XSS). Below are two examples of h
 
 ## Become familiar with the syntax
 
-First of all you need to understand that javascript is interpreted line by line by the browser. While with c++ you compile the program into machine language instructions and then let it run independently.
+First of all you need to understand that JavaScript is interpreted line by line by the browser. While with c++ you compile the program into machine language instructions and then let it run independently.
 
-### Add javascript to your html page.
+### Add JavaScript to your html page.
 
 You can choose to add a script block to your html page. If possible, avoid this technique.
 
@@ -87,13 +87,13 @@ Or you can work with a separate file, which is preferable.
 By using the attribute `defer` the browser will wait for the DOM to be loaded before loading the script. This can be imported for users with slow internet connection.
 
 ::: tip 💡Tip
-* Create a 'scripts' folder in your project folder in which you place the Javascript files.
-* If you use other javascripts in your javascript, you must place these script links before yours.
+* Create a 'scripts' folder in your project folder in which you place the JavaScript files.
+* If you use other JavaScripts in your JavaScript, you must place these script links before yours.
 :::
 
 ### Variables
 
-In javascript, variables are loosely typed, which means that the data type depends on what you put in the variable. So you can perfectly have an integer in a variable one moment and have a string in that same variable a few moments later.
+In JavaScript, variables are loosely typed, which means that the data type depends on what you put in the variable. So you can perfectly have an integer in a variable one moment and have a string in that same variable a few moments later.
 
 **let**
 ```js
@@ -130,7 +130,7 @@ To avoid accidentally forgetting let, var or const you can add `"use strict";` a
 
 ### Data types
 
-Within javascript 7 primitive data types are used:
+Within JavaScript 7 primitive data types are used:
 * **Boolean**: true or false
 * **Number**: integer or float
 * **BigInt**: an integer with unlimited size, recognizable by a small n after the number e.g. `23232n`
@@ -151,20 +151,20 @@ There are 4 more special object types:
 
 ### Logical operators
 
-We can use the well-known logical operators in javascript to build conditions:
+We can use the well-known logical operators in JavaScript to build conditions:
 
 * `&&` the AND operator
 * `||` the OR operator
 * `!` the NOT operator
 
-What is special about the interpretation of conditions is that javascript looks at the condition until the outcome has been determined with certainty, the rest of the condition is no longer interpreted at that time.
+What is special about the interpretation of conditions is that JavaScript looks at the condition until the outcome has been determined with certainty, the rest of the condition is no longer interpreted at that time.
 ```js
 false && (a=2) // left part is false, so the condition is false, a=2 will not be executed anymore.
 ```
 
 ### Decisions
 
-We can use the usual decision trees in javascript:
+We can use the usual decision trees in JavaScript:
 
 ```js
 if(...){
@@ -193,7 +193,7 @@ We also have the ternary operator:
 
 ### Loops
 
-We can also work with loops in Javascript:
+We can also work with loops in JavaScript:
 
 ```js
 // for loop
@@ -234,7 +234,7 @@ do {
 
 ### Functions
 
-We can also work with methods and functions in javascript:
+We can also work with methods and functions in JavaScript:
 ```js
 // method
 function sayMessage(message){
@@ -335,7 +335,7 @@ A level lower you can find the **document object model** with information about 
 
 ### link to HTML elements
 
-There are a few possibilities to retrieve elements of an HTML page in javascript:
+There are a few possibilities to retrieve elements of an HTML page in JavaScript:
 
 * getElementById() : one element with a given id
 * getElementByName() : list of elements with a given name

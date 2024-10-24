@@ -1,6 +1,6 @@
 # Axios a alternative to fetch
 
-Axios is a simpler alternative to the native Javascript Fetch API. It has some additional benefits lilke automatic JSON data transformation.
+Axios is a simpler alternative to the native JavaScript Fetch API. It has some additional benefits lilke automatic JSON data transformation.
 
 Like the Fetch API, it’s a promise-based HTTP client and works in the browser. It also works isomorphically on Node.js, which means it can share a codebase in both the browser and Node.js.
 
@@ -425,7 +425,7 @@ export default {
 </script>
 ```
 
-Because the resource doesn’t exist, we see a 404 error in the console. If we want more information about the error, we can use the toJSON Javascript method on it.
+Because the resource doesn’t exist, we see a 404 error in the console. If we want more information about the error, we can use the toJSON JavaScript method on it.
 
 ```vue{12}
 <template>

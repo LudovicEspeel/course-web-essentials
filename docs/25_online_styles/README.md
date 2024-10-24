@@ -22,7 +22,7 @@ To load Bootstrap you proceed in a similar way to your own CSS file.
 <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
 ```
 
-If you also want to use the Javascript part of Bootstrap add the following in the footer of your html.
+If you also want to use the JavaScript part of Bootstrap add the following in the footer of your html.
 
 ```html
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>

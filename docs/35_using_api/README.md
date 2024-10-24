@@ -1,4 +1,4 @@
-# Using API's in Javascript
+# Using API's in JavaScript
 
 An API is a service that enables a company to make data available without having access to the actual database.
 It is also used as the service that links a frontend to a backend, you will learn this later on.
@@ -34,7 +34,7 @@ For this we use a `index.html` file with the following content:
 </html>
 ```
 
-In Javascript we now need a `getIP` function, this function needs to be `async` because we have to wait for the response of the API service.
+In JavaScript we now need a `getIP` function, this function needs to be `async` because we have to wait for the response of the API service.
 
 To make that request we use the JavaScript `fetch` function with the URL as parameter:
 

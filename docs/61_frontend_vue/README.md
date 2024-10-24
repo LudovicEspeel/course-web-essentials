@@ -10,7 +10,7 @@ Components can also contain other components. For example, in product component 
 
 The benefit of such an architecture helps us to break up a large application into smaller managable components. Plus, we can reuse components within the application or even in a different application.
 
-A Vue component self-contains **template** (HTML-markup), **logic** (Javascript) and **styling** (CSS) in a `.vue` file. It is also called a *Single-File-Component* since it encapsulates all three in a single file.
+A Vue component self-contains **template** (HTML-markup), **logic** (JavaScript) and **styling** (CSS) in a `.vue` file. It is also called a *Single-File-Component* since it encapsulates all three in a single file.
 
 Below is an example of a product component that display's a single string containing the product name;
 
@@ -39,9 +39,9 @@ Below is an example of a product component that display's a single string contai
 </style>
 ``` 
 
-We have the *template section* containing markup to output HTML. In the curly braces, you can put any Javascript code, e.g. variables, expressions, conditionals, loops. In the template, Vue uses declarative rendering where we can declaratively describe HTML output based on Javascript state.
+We have the *template section* containing markup to output HTML. In the curly braces, you can put any JavaScript code, e.g. variables, expressions, conditionals, loops. In the template, Vue uses declarative rendering where we can declaratively describe HTML output based on JavaScript state.
 
-In the *logic section*, using Javascript, you can set values for variables, define props, create custom/life-cycle methods etc. 
+In the *logic section*, using JavaScript, you can set values for variables, define props, create custom/life-cycle methods etc. 
 
 By using CSS we apply the style we want for our output in the *styling section*.
 
@@ -258,7 +258,7 @@ To get started with Bootstrap, we need to reference bootstrap.css in our `public
 
 ![IMAGE](./images/image4.png)
 
-Copy the bootstrap.min.css stylesheet link and the bootstrap.bundle.min.js Javascript link, then paste them into your `<head>` of *index.html*
+Copy the bootstrap.min.css stylesheet link and the bootstrap.bundle.min.js JavaScript link, then paste them into your `<head>` of *index.html*
 
 ```html
 ...
@@ -271,7 +271,7 @@ Copy the bootstrap.min.css stylesheet link and the bootstrap.bundle.min.js Javas
 ```
 
 :::tip 💡Note
-Note that we added the attribute `defer` to the Javascript link to make sure it's loads after the DOM is generated.
+Note that we added the attribute `defer` to the JavaScript link to make sure it's loads after the DOM is generated.
 
 *The link may change depending on which version of Bootstrap is running.*
 :::

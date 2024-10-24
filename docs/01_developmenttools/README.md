@@ -27,7 +27,7 @@ Volar gives you syntax highlighting, TypeScript support, and intellisense for te
 
 ## Node.js
 
-Node.js is an open-source, cross-platform Javascript runtime environment.
+Node.js is an open-source, cross-platform JavaScript runtime environment.
 
 Just install the current version from [nodejs.org](https://nodejs.org/en)
 -->

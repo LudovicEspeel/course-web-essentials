@@ -18,7 +18,7 @@ After following both courses, you have the tools to become a full stack develope
 This course:
 * Introduction to web development
 * Frontend webdesign with HTML and CSS
-* Frontend scripting with Javascript
+* Frontend scripting with JavaScript
 * Deployment
 
 Next course (second year):
@@ -46,7 +46,7 @@ And professionally relevant sources such as:
 * Blog Matteo Duò on Kinsta about responsive webdesign.
 * Blog Michael J. Fordham on editorx about cross-browser webdesign
 * Jon Duckett (2011). HTML & CSS: Design and build websites
-* Jon Duckett (2014). Javascript & Jquery: Interactive front-end web development
+* Jon Duckett (2014). JavaScript & Jquery: Interactive front-end web development
 * Jon Duckett (2022). PHP & MySQL: Server-side web development
 * Bezkoder.com
 * Greg Lim (2022). Beginning Vue3 Development

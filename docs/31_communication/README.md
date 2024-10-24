@@ -103,4 +103,4 @@ The MQTT protocol has become a standard for IoT data transmission because it del
 
 * **Secure**: MQTT makes it easy for developers to encrypt messages and authenticate devices and users using modern authentication protocols, such as OAuth, TLS1.3, Customer Managed Certificates, and more.
 
-* **Well-supported**: Several languages like Python, Javascript, Node,... have extensive support for MQTT protocol implementation. Hence, developers can quickly implement it with minimal coding in any type of application.
+* **Well-supported**: Several languages like Python, JavaScript, Node,... have extensive support for MQTT protocol implementation. Hence, developers can quickly implement it with minimal coding in any type of application.
