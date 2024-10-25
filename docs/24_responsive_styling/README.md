@@ -152,28 +152,28 @@ Of course, the number of layout containers you have will depend on your design, 
 With a mobile-first approach, you can first style the most important elements in the layout (note: it does not contain a media query for the simplest style you use for a standard smartphone in normal mode):
 
 ```css
-#wrapper { width:95%; margin: 0 auto; }
-#header { width:100%; }
-#content { width:100%; }
-#sidebar { width:100%; }
-#footer { width:100%; }
+#wrapper { width: 95%; margin: 0 auto; }
+#header { width: 100%; }
+#content { width: 100%; }
+#sidebar { width: 100%; }
+#footer { width: 100%; }
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) { ... }
 
 /* Medium devices (tablets, 768px and up) */
-@media (min width: 768px) {
-   #wrapper { width:90%; margin: 0 auto; }
-   #content { width:70%; float: left; }
-   #sidebar { width:30%; float: right; }
+@media (min-width: 768px) {
+   #wrapper { width: 90%; margin: 0 auto; }
+   #content { width: 70%; float: left; }
+   #sidebar { width: 30%; float: right; }
 }
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) { ... }
 
 /* Extra large devices (large desktops, 1200px and up) */
-@media (min width: 1200px) {
-   #wrapper { width:90%; margin: 0 auto; }
+@media (min-width: 1200px) {
+   #wrapper { width: 90%; margin: 0 auto; }
 }
 ```
 
