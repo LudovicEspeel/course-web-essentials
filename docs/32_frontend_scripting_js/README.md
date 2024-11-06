@@ -359,11 +359,11 @@ At the top level is the **browser object model** with information from the curre
 
 ![image](./images/image1.png)
 
-At level lower you can find the **DOM (Document Object Model** with information about the HTML structure of the page.
+At level lower you can find the **DOM (Document Object Model)** with information about the HTML structure of the page.
 
-![image](./images/image2b.png)
+![image](./images/image2.png)
 
-### link to HTML elements
+### Link to HTML elements
 
 There are a few possibilities to retrieve elements of an HTML page in JavaScript by using `window.document.function()`. Note: `window.` can be omitted here.
 
