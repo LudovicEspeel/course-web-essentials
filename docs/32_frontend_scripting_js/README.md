@@ -36,7 +36,7 @@ console.log("Result : " + total);
 ```
 
 Sometimes the error is a bit more complex and we need to debug.
-Have a look at the information on the [developer page of Chrome](https://developer.chrome.com/docs/devtools/javascript/)
+Have a look at the information on the [developer page of Chrome](https://developer.chrome.com/docs/devtools/javascript/).
 
 <!--
 ## The dangers of internet sources
@@ -78,7 +78,7 @@ You can choose to add a script block to your html page (but if possible, avoid t
     </script>
 </head>
 ```
-Note: you can ommit the `type="text/javascript"` attribute.
+Note: you can omit the `type="text/javascript"` attribute.
 
 Or you can work with a separate file, which is preferable:
 
@@ -101,19 +101,19 @@ In JavaScript, variables are **loosely typed**, which means that the data type d
 ```js
 var y = 12;
 ```
-Var is a general variable definition, so if you define it within a function, the function is the scope of the variable, if you place it at the top, the entire script file becomes the scope.
+*var* is a general variable definition, so if you define it within a function, the function is the scope of the variable, if you place it at the top, the entire script file becomes the scope.
 
 **let**
 ```js
 let y = 13;
 ```
-Let is a variable definition that is valid only within the block scope `{}` in which it is defined.
+*let* is a variable definition that is valid only within the block scope `{}` in which it is defined.
 
 **const**
 ```js
 const y = 11;
 ```
-Const is the definition of a constant, has the same scope as *let* but you cannot change the value.
+*const* is the definition of a constant, has the same scope as *let* but you cannot change the value.
 
 ::: warning ❗Attention
 If you define a variable without *let*, *var* or *const* then it is automatically a global variable. Then you must pay attention not to define a variable with the same name anywhere else.
@@ -141,7 +141,7 @@ Within JavaScript, 7 primitive data types are used:
 * **Null**: to indicate a special value 'null'
 * **Symbol**: each instance is unique, e.g. `Symbol("description");`
 
-In addition, you have the **object** type that can be used to store a collection of values.
+In addition, you have the **object** type that can be used to store a collection of values:
 ```js
 let obj = { name: "Samira", age: 25 };
 ```
@@ -238,16 +238,8 @@ do {
 
 ### Functions
 
-We can also work with methods and functions in JavaScript:
+We can also work with functions and methods (see further) in JavaScript:
 ```js
-// method
-function sayMessage(message) {
-    if (typeof (message) === "string") {
-        console.log(message);
-    }
-}
-
-// function
 function isEven(n) {
     return ((n % 2) === 0);
 }
@@ -259,7 +251,7 @@ In addition, we can also work with parameters here:
 ```js
 // function with default parameters
 function sayMessage(message, times) {
-    times = (typeof (times) !== "undefined") ? times : 10;
+    times = (typeof (times) !== undefined) ? times : 10;
     
     if (typeof (message) === "string") {
         for (let i = 0; i < times; i++) {
@@ -268,12 +260,20 @@ function sayMessage(message, times) {
     }
 }
 
+sayMessage("Hello");
+sayMessage("Hello", 5);
+
 // function with the number of parameters of your choice, parameters go into the array 'arguments'
 function sayMessages() {
     for (let i = 0; i < arguments.length; i++) {
         console.log(arguments[i]);
     }
 }
+
+sayMessage();
+sayMessage(1);
+sayMessage(1, 2);
+// ...
 ```
 Passing parameters works on the principle of 'pass by value', i.e. the value of temporary is copied to a local variable. However, this is not the case for reference variables such as an object (or an array). There the principle of 'pass by reference' applies and there is a temporary variable that refers to the original.
 
@@ -310,7 +310,7 @@ let sayMessage = function (message) {
 // pass a function as a parameter
 window.setTimeout(sayMessage, 5000, "Hi");
 
-// a function as part of an object
+// a function as part of an object (= a method)
 let obj = {
     f: function (message) {
         console.log(message);
