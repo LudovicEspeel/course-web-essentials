@@ -251,9 +251,9 @@ In addition, we can also work with parameters here:
 ```js
 // function with default parameters
 function sayMessage(message, times) {
-    times = (typeof (times) !== undefined) ? times : 10;
+    times = (typeof(times) !== undefined) ? times : 10;
     
-    if (typeof (message) === "string") {
+    if (typeof(message) === "string") {
         for (let i = 0; i < times; i++) {
             console.log(message);
         }
