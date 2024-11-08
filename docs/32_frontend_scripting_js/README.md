@@ -164,6 +164,12 @@ What is special about the interpretation of conditions in JavaScript is that it 
 false && (a === 2) // left part is false, so the condition is false, a === 2 will not be executed anymore.
 ```
 
+Note: 
+
+The `===` operator is known as the **strict equality operator**. It is used to compare two values to see if they are exactly the same in **both type and value**. This operator only returns `true` if both the values and types match perfectly. It is recommended to use `===` as much as possible to avoid unexpected results caused by type conversions.
+
+The `==` operator, also known as the **loose equality operator**, also exists in JavaScript. This operator compares two values to see if they are equal **in value**, but it does not require them to be of the same type. If the values are different types, `==` will attempt to convert them to a common type before comparing, which can lead to unexpected outcomes.
+
 ### Decisions
 
 We can use the usual decision trees in JavaScript:
@@ -205,7 +211,7 @@ for (let i = 0; i < 10; i++) { }
 let names = ["Pete", "John", "Pol"];
 for (let name of names) {
     console.log(name);
-};
+}
 
 // for-in loop:
 let names = { n1: "Pete", n2: "John", n3: "Pol" };
@@ -213,7 +219,7 @@ for (let i in names) {
     if (names.hasOwnProperty(i)) {
         console.log(names[i]);
     }
-};
+}
 
 // forEach loop:
 let names = ["Pete", "John", "Pol"];
@@ -270,9 +276,9 @@ function sayMessages() {
     }
 }
 
-sayMessage();
-sayMessage(1);
-sayMessage(1, 2);
+sayMessages();
+sayMessages("Hi");
+sayMessages("Hi", "there");
 // ...
 ```
 Passing parameters works on the principle of 'pass by value', i.e. the value of temporary is copied to a local variable. However, this is not the case for reference variables such as an object (or an array). There the principle of 'pass by reference' applies and there is a temporary variable that refers to the original.
@@ -379,7 +385,7 @@ Events are all events in a browser, e.g. the user clicks on something, an elemen
 
 **1. Older technology (supported by all browsers)**
 
-Use of an attribute that describes the event type , which then calls a JavaScript function. This is (still) a commonly used method, but the downside of this approach is that it is not very organized.
+Use of an attribute that describes the event type , which then calls a JavaScript function. This is (still) a commonly used approach, but the downside is that it is not very organized.
 
 ```html
 <!-- if the focus of this element disappears then execute the function. -->
@@ -387,13 +393,13 @@ Use of an attribute that describes the event type , which then calls a JavaScrip
 ```
 
 ```js
-function checkUsername(){
+function checkUsername() {
   // code...
 }
 ```
 <br>
 
-Another approach is to link a function to an event. The downside of this method is that you can only link one function to the event:
+Another approach is to link a function to an event. The downside is that you can only link one function to the event:
 
 ![image](./images/image3.png)
 
@@ -402,7 +408,7 @@ Another approach is to link a function to an event. The downside of this method 
 ```
 
 ```js
-function checkUsername(){
+function checkUsername() {
   // code...
 }
 
@@ -413,7 +419,7 @@ userName.onblur = checkUsername;
 
 **2. Newer technology (only supported by newer browsers)**
 
-You can now even link multiple functions to an event. This is the preferred method, and it will be used further here.
+You can now even link multiple functions to an event. This is the preferred approach, and it will be used in this course.
 
 ![image](./images/image4.png)
 
@@ -422,7 +428,7 @@ You can now even link multiple functions to an event. This is the preferred meth
 ```
 
 ```js
-function checkUsername(){
+function checkUsername() {
   // code...
 }
 
@@ -436,7 +442,7 @@ An event is actually an object with properties.
 For example, you can find out in the handling function who the event owner is:
 
 ```js
-function checkUsername(e){
+function checkUsername(e) {
   let target = e.target; // owner of the event.
   // code...
 }
