@@ -26,7 +26,7 @@ For this we use a `index.html` file with the following content:
     <script defer src="./resources/js/script.js"></script>
 </head>
 <body>
-    <button onclick="getIp()">Get my ip address</button>
+    <button id="buttonIp">Get my ip address</button>
     <p id="ip"></p>
     <p id="isp"></p>    
     <p id="coordinates"></p>
@@ -43,7 +43,7 @@ let response = await fetch("https://ipinfo.io/json?token=<your-token>");
 ```
 
 We need the `await` because we need to wait for the response and don't want to freeze the application.
-The response we get from an API is always a JSON format as a string, so to handle the data better we need to convert this to a JSON object.
+The response we get from an API is always a JSON format as a string, so to handle the data better we need to convert this to a JSON object:
 
 ```js
 let ipInfo = await response.json();
@@ -52,6 +52,11 @@ let ipInfo = await response.json();
 Finally we use the received info to populate the `<p>` in HTML :
 
 ```js
+window.addEventListener("DOMContentLoaded", () => 
+{
+    document.getElementById("buttonIp").addEventListener("click", getIp);
+});
+
 async function getIp(){
     let response = await fetch("https://ipinfo.io/json?token=<your-token>");
     let ipInfo = await response.json();
@@ -66,7 +71,7 @@ async function getIp(){
 
 For this example we will use a JSON file containing the response data from an API.
 
-Once the HTML structure is loaded we will start a function `getData` to retrieve the data and populate the page.
+Once the HTML structure is loaded we will start a function `getData` to retrieve the data and populate the page:
 
 ```js
 window.addEventListener("DOMContentLoaded", getData);
@@ -75,7 +80,7 @@ window.addEventListener("DOMContentLoaded", getData);
 To receive the data we follow the same strategy as before, but the URL is in fact a path to a file:
 
 ```js
-let response = await fetch("/resources/data/apisim.json");
+let response = await fetch("resources/data/apisim.json");
 let json = await response.json();
 ```
 
