@@ -23,7 +23,7 @@ For this we use a `index.html` file with the following content:
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Example 1: using a public API</title>
-    <script defer src="./resources/js/script.js"></script>
+    <script src="resources/js/script.js"></script>
 </head>
 <body>
     <button id="buttonIp">Get my ip address</button>
