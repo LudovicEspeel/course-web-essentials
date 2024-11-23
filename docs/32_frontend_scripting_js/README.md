@@ -324,13 +324,23 @@ let obj = {
 };
 obj.f("Hi");
 
+let numbers = [1, 2, 3, 4, 5];
 // an anonymous function (which has no name)
 numbers.forEach(function (i) {
     console.log("array contains ", i);
 });
 
-// an arrow function
-double = i => (i * 2);
+// arrow function, the ()'s can be omitted here:
+double = (i) => (i * 2);
+console.log(double(5));
+
+// arrow function with multiple parameters, the () is now mandatory
+// the function has also a more complex body, so we use {}
+const multiply = (a, b) => {
+    const result = a * b;
+    return result;
+};
+console.log(multiply(3, 4));
 ```
 A function that is passed as a parameter to another function is called a **callback function**.
 
