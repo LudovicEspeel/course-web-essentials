@@ -9,7 +9,7 @@ Each student has his/her own VM on the server. In this VM we will use Docker to 
 :::warning 🔥Warning
 First make sure you are connected to the `devbit` network.
 
-You will receive the credentials (= ip address, user name and password) for your VM from your teacher.
+You will receive the credentials (= ip address, username and password) for your VM from your teacher.
 :::
 
 Next we will be making some one-time adjustments and installations on your VM.
@@ -21,7 +21,7 @@ To be able to connect to your VM you need to setup the connection with your GitH
 Open a `powershell` terminal and connect to your VM:
 
 ```bash
-ssh <your-user-name>@<your-vm-ip-address>
+ssh <your-username>@<your-vm-ip-address>
 ```
 
 *If asked if you want to continue, just type `yes`.*
@@ -50,10 +50,10 @@ Depending on how many students install docker simultaneously, this can take a wh
 Please limit this to **6 students at the same time**.
 :::
 
-Next we need to add `<your-user-name>` to docker.
+Next we need to add `<your-username>` to docker.
 
 ```bash
-sudo adduser <your-user-name> docker
+sudo adduser <your-username> docker
 exit
 ```
 
