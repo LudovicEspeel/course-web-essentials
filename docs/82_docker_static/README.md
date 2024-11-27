@@ -14,17 +14,17 @@ Please check if all your URL's are relative (HTML, CSS and JS) on your website.
 
 ### Create a GitHub repository for deployment
 
-Steps to take if you do **not** have a repository yet:
+Steps to take if you **do not have a repository yet**:
 
 1. Create a new repository on GitHub.
 2. Create a local folder `<project-name>` with a subfolder `website`
 3. Make a copy of your project to the folder `website`
 4. Open the folder `<project-name>` in Visual Code and open a terminal.
 5. Make it a git repository by typing `git init`
-6. Add the remote GitHub repository by typing `git remote add origin git@github.com:yourusername/repositoryname.git` (the last part is your SSH link from your GitHub repository).
+6. Add the remote GitHub repository by typing `git remote add origin git@github.com:yourGitHubUsername/repositoryname.git` (the last part is your SSH link from your GitHub repository).
 7. Make a first push.
 
-Steps to take if you **already** have a repository (e.g. created via an invitation link on Toledo):
+Steps to take if you **already have a repository** (e.g. created via an invitation link on Toledo):
 
 1. Do a `git clone <ssh-url>`
 2. In your cloned local folder, create a subfolder `website`
