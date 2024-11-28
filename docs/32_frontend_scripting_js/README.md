@@ -43,7 +43,7 @@ Have a look at the information on the [developer page of Chrome](https://develop
 
 It's completly normal for a (starting) developer to use the internet as a source of information. Keep in mind that everyone can post something on the web, professionals, hobbyists and also people with bad intentions. **So always double check a source before implementing some code to your project!**
 
-:::danger ⛔Security risk
+:::danger ⛔ Security risk
 
 Avoid using the `.innerHTML` syntax, it entails huge **security risks**!
 
@@ -69,7 +69,7 @@ First of all you need to understand that JavaScript is interpreted line by line 
 
 ### Add JavaScript to your html page.
 
-You can choose to add a script block to your html page (but if possible, avoid this technique):
+You can choose to add a script block to your HTML page (but if possible, avoid this technique):
 
 ```html
 <head>
@@ -379,23 +379,272 @@ At level lower you can find the **DOM (Document Object Model)** with information
 
 ![image](./images/image2.png)
 
-### Link to HTML elements
+### Selecting HTML elements
 
-There are a few possibilities to retrieve elements of an HTML page in JavaScript by using `window.document.function()`. Note: `window.` can be omitted here.
+There are a few possibilities to select elements of an HTML page in JavaScript by using `window.document.function()` (note: the `window.` can be omitted here).
 
-* `document.getElementById()`: one element with a given id
-* `document.getElementByName()`: list of elements with a given name
-* `document.getElementByTagName()`: list of a certain type of elements
-* `document.querySelectorAll()`: list of elements that match a CSS selector
-* `document.querySelector()`: first element that satisfies a CSS selector
+* `document.getElementById()`: gets one element with a given id
+* `document.getElementsByName()`: gets an array of elements with a given name
+* `document.getElementsByTagName()`: gets an array of a certain type of elements
+* `document.getElementsByClassName()`: gets an array of elements with a given class name
+* `document.querySelectorAll()`: gets an array of elements that match a CSS selector
+* `document.querySelector()`: gets a first element that satisfies a CSS selector
+
+Here's an example demonstrating how to select elements using the different JavaScript methods:
+
+```html
+<head>
+    <script src="resources/js/script.js"></script>
+</head>
+
+<body>
+    <h1 id="title">Hello world!</h1>
+    <p class="description">This is a paragraph.</p>
+    <p>Another paragraph.</p>
+    <div class="description">This is a div.</div>
+    <input name="txtInput" type="text">
+</body>
+```
+
+```js
+// in script.js:
+const title = document.getElementById("title");
+console.log("Selected by id:", title);
+
+const txtInputs = document.getElementsByName("txtInput");
+console.log("Selected by name:", txtInputs);
+console.log("Selected by name, only first element:", txtInputs[0]);
+
+const paragraphs = document.getElementsByTagName("p");
+console.log("Selected by tag name:", paragraphs);
+
+const descriptions = document.getElementsByClassName("description");
+console.log("Selected by class:", descriptions);
+
+const allParagraphs = document.querySelectorAll(".description");
+console.log("Selected by querySelectorAll:", allParagraphs);
+
+const firstParagraph = document.querySelector(".description");
+console.log("Selected by querySelector:", firstParagraph);
+```
+
+Note: when you run this code, you'll notice in your browser's console that the values are *null*, *undefined*, an empty *HTMLCollection* array or *NodeList* array:
+
+![image](./images/image3.png)
+
+This is normal because the HTML page is processed by the browser from top to bottom, so the JavaScript file is loaded first and attempts to select HTML elements that have not yet been loaded.
+
+There are several options to solve the problem.
+
+#### Option 1: put the JavaScript file include or code at the end of the `<body>` section
+   
+   This is the option that might first come to mind, but the problem here is that you will have to scroll all the way down through the (lengthy) HTML page to find the JavaScript code or file include.
+
+#### Option 2: encapsulate the JavaScript code in an `addEventListener` block
+
+We use the `DOMContentLoaded` or `load` event here:
+
+```js
+window.addEventListener("DOMContentLoaded", () => 
+{
+    const title = document.getElementById("title");
+});
+```
+
+* `DOMContentLoaded` can be used in modern browsers. It will be executed when the HTML document has been completely loaded and parsed by the browser without waiting for stylesheets, images and other external resources to finish loading.
+
+* `load` can be used in both old and modern browsers. It will be executed when the HTML document, including all dependent resources such as stylesheets, images and other external resources has completely loaded. This is useful when you need to ensure everything on the page is ready before running your script, particularly when the script depends on external resources.
+
+#### Option 3: use the attribute `defer`
+   
+```js
+<script defer src="resources/js/script.js"></script>
+```
+
+The `defer` attribute can be used in modern browsers and works **only for JavaScript file includes** (so when the `src` attribute is present). 
+It indicates that the script should be executed only after the HTML document has been fully parsed (but before the *DOMContentLoaded* event is fired). It ensures that your script does not block the rendering of the HTML page and helps optimize page loading performance.
+<br><br>
+
+If you apply one of above options, you'll get now this output in the browser's console:
+
+![image](./images/image4.png)
+
+### Reading and writing content of an HTML element
+
+After selecting an HTML element, you can retrieve or write content using these properties:
+
+* `.textContent`: retrieves or sets all text within an element, including hidden text. It doesn't interpret HTML tags, it treats them as plain text.
+
+* `.innerText`: retrieves or sets the visible text within an element (i.e. it ignores text in `visibility: hidden`). It reflects the rendered text, excluding hidden content.
+
+* `.innerHTML`: retrieves or sets the HTML structure inside an element, including any tags. It's useful for inserting or extracting HTML content with tags.
+
+    :::danger ⛔ Security risk
+    Directly setting the `.innerHTML` property of a selected element on your page with untrusted input (e.g. from an input field) can lead to **Cross-Site Scripting (XSS)** attacks. Attackers can inject malicious scripts into your webpage, which can execute when the modified content is rendered. You should at least sanitize the input before assigning it to the `.innerHTML` property.
+    :::
+    Additionally, setting the `.innerHTML` property with a long HTML string can make your code harder to read and maintain. It is better to use DOM manipulation methods (see further) to create and modify HTML elements programmatically.
+
+* `.value`: is used for input fields (e.g. `<input>`, `<textarea>`, ...). It retrieves the user input of the field or sets a value to the field .
+
+#### Reading content
+
+In this example, we read the content of the elements using the properties:
+
+```html
+<head>
+    <style>
+        #invisibleDiv {
+            visibility: hidden;
+            /* makes the element invisible but still takes up space <=> "display: none;" */
+        }
+    </style>
+    <script defer src="resources/js/script.js"></script>
+</head>
+
+<body>
+    <h1 id="title">Hello <i>world</i>!</h1>
+    <div id="invisibleDiv">This is an invisible div.</div>
+    <input id="txtInput" type="text" value="Some input ...">  
+</body>
+```
+
+```js
+// in script.js:
+const title = document.getElementById("title");
+console.log("Selected title:");
+console.log("- Read content by .textContent:", title.textContent);
+console.log("- Read content by .innerText:", title.innerText);
+console.log("- Read content by .innerHTML:", title.innerHTML);
+
+const invisibleDiv = document.getElementById("invisibleDiv");
+console.log("Selected invisibleDiv:");
+console.log("- Read content by .textContent:", invisibleDiv.textContent);
+console.log("- Read content by .innerText:", invisibleDiv.innerText);
+console.log("- Read content by .innerHTML:", invisibleDiv.innerHTML);
+
+const txtInput = document.getElementById("txtInput");
+console.log("Selected txtInput:");
+console.log("- Read content by .value:", txtInput.value);
+```
+
+The output in the browser's console:
+
+![image](./images/image5.png)
+
+Notes:
+* See the difference between `.innerText` and `.textContent` when an element is made invisible using CSS. The property `.innerText` will return an empty string as result.
+* If the input field doesn't contain a value, the `.value` property will return an empty string.
+
+#### Writing content
+
+In this example, we write the content into the elements using the properties:
+
+```html
+<p id="p1"></p>
+<p id="p2"></p>
+<p id="p3"></p>
+<input id="txtInput" type="text">
+```
+
+```js
+const p1 = document.getElementById("p1");
+p1.textContent = "First paragraph with <u>content</u> set by .textContent";
+
+const p2 = document.getElementById("p2");
+p2.innerText = "Second paragraph with <u>content</u> set by .innerText";
+
+const p3 = document.getElementById("p3");
+p3.innerHTML = "Third paragraph with <u>content</u> set by .innerHTML";
+
+const txtInput = document.getElementById("txtInput");
+txtInput.value = "Content set by .value";
+```
+
+The output in the browser:
+
+![image](./images/image6.png)
+
+<br>
+Note: instead of creating a separate variable to store the element selection and then applying a property to it, you can do this in a single line:
+
+```js
+const text = document.getElementById("p1").textContent; // Reading
+document.getElementById("p1").textContent = "Content"; // Writing
+```
+However, you must ensure that `document.getElementById("p1")` is never *null* (which happens if the element is not found). Attempting to apply a property to a *null* element will result in an error causing the rest of the code to stop executing!
+
+#### Creating HTML elements using DOM manipulation methods
+
+The previously discussed properties are primarily intended for placing simple content within an element. But what if you want to dynamically add or remove HTML elements? For that, we have DOM manipulation methods.
+
+The following example will select the *div* element and then add two *p* elements below with text content and some attributes. The second *p* element will also contain an image:
+
+```html
+<div id="container"></div>
+```
+
+```js
+// Step 1: Select the div element
+const container = document.getElementById("container");
+
+// Step 2: Create the first p element
+const p1 = document.createElement("p");
+p1.id = "p" + 1; // Set the id attribute
+p1.className = "style1"; // Set the class attribute 
+// Alternative syntax: p1.setAttribute("class", "style1");
+
+p1.style.color = "red"; // Set the style attribute with a color value
+// Alternative syntax: p1.style.setProperty("color", "red");
+
+p1.textContent = "A paragraph with text."; // Add text content
+
+// Step 3: Create the second p element
+const p2 = document.createElement("p");
+p2.id = "p" + 2;
+p2.className = "style1 style2"; // Set multiple classes
+// Alternative syntax: p2.classList.add("style1", "style2");
+// With the alternative syntax, you can even add, remove or toggle class names on a dynamic way:
+// p2.classList.add("style3");
+// p2.classList.remove("style3");
+// p2.classList.toggle("style4");
+
+p2.textContent = "Another paragraph with text and an image.";
+
+// Step 4: Create the img element
+const img = document.createElement("img");
+img.src = "resources/images/photo.jpg";
+img.alt = "Some info";
+
+// Step 5: Append the img element to the second p element
+p2.appendChild(img);
+
+// Step 6: Append the p elements to the div
+container.appendChild(p1);
+container.appendChild(p2);
+```
+
+After execution, following HTML code will be generated (you can see this in the *Developer Tools* of your browser below the *Elements* tab) and will also be visualized in the browser.
+
+```html
+<div id="container">
+    <p id="p1" class="style1" style="color: red;">A paragraph with text.</p>
+    <p id="p2" class="style1 style2">Another paragraph with text and an image.
+        <img src="resources/images/photo.jpg" alt="Some info">
+    </p>
+</div>
+```
+<br>
+Typically, you will place these DOM manipulations under a specific event (e.g. clicking a button). This will be explained in the next section.
 
 ### Handle events
 
 Events are all events in a browser, e.g. the user clicks on something, an element gets the focus, ...
 
-**1. Older technology (supported by all browsers)**
+There are several ways to create events.
 
-Use of an attribute that describes the event type , which then calls a JavaScript function. This is (still) a commonly used approach, but the downside is that it is not very organized.
+#### 1. Older technology (supported by all browsers)
+
+Is the use of an attribute that describes the event type , which then calls a JavaScript function. This is (still) a commonly used approach, but the downside is that it is not very organized.
 
 ```html
 <!-- if the focus of this element disappears then execute the function. -->
@@ -411,7 +660,7 @@ function checkUsername() {
 
 Another approach is to link a function to an event. The downside is that you can only link one function to the event:
 
-![image](./images/image3.png)
+![image](./images/image7.png)
 
 ```html
 <input type="text" id="username">
@@ -427,11 +676,11 @@ userName.onblur = checkUsername;
 ```
 (*)
 
-**2. Newer technology (only supported by newer browsers)**
+#### 2. Newer technology (only supported by modern browsers)
 
 You can now even link multiple functions to an event. This is the preferred approach, and it will be used in this course.
 
-![image](./images/image4.png)
+![image](./images/image8.png)
 
 ```html
 <input type="text" id="username">
@@ -460,6 +709,7 @@ function checkUsername(e) {
 let userName = document.getElementById("username");
 userName.addEventListener("blur", checkUsername, false);
 ```
+<br>
 
 (*) Note: how can we pass arguments to the function *checkUsername*? Use an anonymous function or use the *bind()* function. Have a look on the internet for the right syntax.
 
