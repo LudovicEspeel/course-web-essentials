@@ -379,9 +379,12 @@ At level lower you can find the **DOM (Document Object Model)** with information
 
 ![image](./images/image2.png)
 
+In the next sections, we'll show examples using some DOM methods and properties to access and manipulate HTML.
+For a complete overview of all the methods and properties, check out this [reference](https://developer.mozilla.org/en-US/docs/Web/API/Document).
+
 ### Selecting HTML elements
 
-There are a few possibilities to select elements of an HTML page in JavaScript by using `window.document.function()` (note: the `window.` can be omitted here).
+There are several possibilities to select elements of an HTML page in JavaScript by using `window.document.function()` (note: the `window.` can be omitted here).
 
 * `document.getElementById()`: gets one element with a given id
 * `document.getElementsByName()`: gets an array of elements with a given name
@@ -389,6 +392,8 @@ There are a few possibilities to select elements of an HTML page in JavaScript b
 * `document.getElementsByClassName()`: gets an array of elements with a given class name
 * `document.querySelectorAll()`: gets an array of elements that match a CSS selector
 * `document.querySelector()`: gets a first element that satisfies a CSS selector
+* `document.body`: gets the `<body>` element
+* `document.documentElement`: gets the `<html>` element
 
 Here's an example demonstrating how to select elements using the different JavaScript methods:
 
@@ -576,6 +581,8 @@ However, you must ensure that `document.getElementById("p1")` is never *null* (w
 #### Creating HTML elements using DOM manipulation methods
 
 The previously discussed properties are primarily intended for placing simple content within an element. But what if you want to dynamically add or remove HTML elements? For that, we have DOM manipulation methods.
+
+
 
 The following example will select the *div* element and then add two *p* elements below with text content and some attributes. The second *p* element will also contain an image:
 
