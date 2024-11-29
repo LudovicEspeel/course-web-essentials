@@ -380,11 +380,10 @@ At level lower you can find the **DOM (Document Object Model)** with information
 ![image](./images/image2.png)
 
 In the next sections, we'll show examples using some DOM methods and properties to access and manipulate HTML.
-For a complete overview of all the methods and properties, check out this [reference](https://developer.mozilla.org/en-US/docs/Web/API/Document).
 
 ### Selecting HTML elements
 
-There are several possibilities to select elements of an HTML page in JavaScript by using `window.document.function()` (note: the `window.` can be omitted here).
+There are several possibilities to select elements of an HTML page in JavaScript by using `window.document.function()` (note: the `window.` can be omitted here):
 
 * `document.getElementById()`: gets one element with a given id
 * `document.getElementsByName()`: gets an array of elements with a given name
@@ -395,7 +394,7 @@ There are several possibilities to select elements of an HTML page in JavaScript
 * `document.body`: gets the `<body>` element
 * `document.documentElement`: gets the `<html>` element
 
-Here's an example demonstrating how to select elements using the different JavaScript methods:
+Here's an example demonstrating how to select elements using the different DOM methods:
 
 ```html
 <head>
@@ -439,11 +438,11 @@ Note: when you run this code, you'll notice in your browser's console that the v
 
 This is normal because the HTML page is processed by the browser from top to bottom, so the JavaScript file is loaded first and attempts to select HTML elements that have not yet been loaded.
 
-There are several options to solve the problem.
+There are several options to solve this problem.
 
 #### Option 1: put the JavaScript file include or code at the end of the `<body>` section
    
-   This is the option that might first come to mind, but the problem here is that you will have to scroll all the way down through the (lengthy) HTML page to find the JavaScript code or file include.
+This is the option that might first come to mind, but the problem here is that you will have to scroll all the way down through the (lengthy) HTML page to find the JavaScript code or file include.
 
 #### Option 2: encapsulate the JavaScript code in an `addEventListener` block
 
@@ -476,7 +475,7 @@ If you apply one of above options, you'll get now this output in the browser's c
 
 ### Reading and writing content of an HTML element
 
-After selecting an HTML element, you can retrieve or write content using these properties:
+After selecting an HTML element, you can retrieve or write content using these DOM properties:
 
 * `.textContent`: retrieves or sets all text within an element, including hidden text. It doesn't interpret HTML tags, it treats them as plain text.
 
@@ -493,7 +492,7 @@ After selecting an HTML element, you can retrieve or write content using these p
 
 #### Reading content
 
-In this example, we read the content of the elements using the properties:
+In this example, we read the content of the elements using the DOM properties:
 
 ```html
 <head>
@@ -542,7 +541,7 @@ Notes:
 
 #### Writing content
 
-In this example, we write the content into the elements using the properties:
+In this example, we write the content into the elements using the DOM properties:
 
 ```html
 <p id="p1"></p>
@@ -581,8 +580,6 @@ However, you must ensure that `document.getElementById("p1")` is never *null* (w
 #### Creating HTML elements using DOM manipulation methods
 
 The previously discussed properties are primarily intended for placing simple content within an element. But what if you want to dynamically add or remove HTML elements? For that, we have DOM manipulation methods.
-
-
 
 The following example will select the *div* element and then add two *p* elements below with text content and some attributes. The second *p* element will also contain an image:
 
@@ -642,6 +639,8 @@ After execution, following HTML code will be generated (you can see this in the 
 ```
 <br>
 Typically, you will place these DOM manipulations under a specific event (e.g. clicking a button). This will be explained in the next section.
+
+And of course, there are many more DOM manipulation methods than those demonstrated in the previous example. For a complete overview of all DOM methods and properties, check out this [reference](https://developer.mozilla.org/en-US/docs/Web/API/Document).
 
 ### Handle events
 
