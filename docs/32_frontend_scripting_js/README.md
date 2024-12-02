@@ -67,7 +67,7 @@ Specifically **Cross-Site Scripting Attacks** (XSS). Below are two examples of h
 
 First of all you need to understand that JavaScript is interpreted line by line by the browser. While with C or C++ you compile the program into machine language instructions and then let it run independently.
 
-### Add JavaScript to your html page.
+### Add JavaScript to your HTML page
 
 You can choose to add a script block to your HTML page (but if possible, avoid this technique):
 
@@ -281,7 +281,7 @@ sayMessages("Hi");
 sayMessages("Hi", "there");
 // ...
 ```
-Passing parameters works on the principle of 'pass by value', i.e. the value of temporary is copied to a local variable. However, this is not the case for reference variables such as an object (or an array). There the principle of 'pass by reference' applies and there is a temporary variable that refers to the original.
+Passing parameters works on the principle of **pass by value**, i.e. the value of temporary is copied to a local variable. However, this is not the case for reference variables such as an object (or an array). There the principle of **pass by reference** applies and there is a temporary variable that refers to the original.
 
 ```js
 // pass by value example
@@ -375,7 +375,7 @@ At the top level is the **browser object model** with information from the curre
 
 ![image](./images/image1.png)
 
-At level lower you can find the **DOM (Document Object Model)** with information about the HTML structure of the page.
+At a level lower you can find the **DOM (Document Object Model)** with information about the HTML structure of the page.
 
 ![image](./images/image2.png)
 
@@ -465,7 +465,7 @@ window.addEventListener("DOMContentLoaded", () =>
 <script defer src="resources/js/script.js"></script>
 ```
 
-The `defer` attribute can be used in modern browsers and works **only for JavaScript file includes** (so when the `src` attribute is present). 
+The `defer` attribute can be used in modern browsers and **works only for JavaScript file includes** (so when the `src` attribute is present). 
 It indicates that the script should be executed only after the HTML document has been fully parsed (but before the *DOMContentLoaded* event is fired). It ensures that your script does not block the rendering of the HTML page and helps optimize page loading performance.
 <br><br>
 
@@ -484,11 +484,11 @@ After selecting an HTML element, you can retrieve or write content using these D
 * `.innerHTML`: retrieves or sets the HTML structure inside an element, including any tags. It's useful for inserting or extracting HTML content with tags.
 
     :::danger ⛔ Security risk
-    Directly setting the `.innerHTML` property of a selected element on your page with untrusted input (e.g. from an input field) can lead to **Cross-Site Scripting (XSS)** attacks. Attackers can inject malicious scripts into your webpage, which can execute when the modified content is rendered. You should at least sanitize the input before assigning it to the `.innerHTML` property.
+    Directly setting the `.innerHTML` property of a selected element on your page with untrusted input (e.g. from an input field) can lead to **Cross-Site Scripting (XSS) attacks**. Attackers can inject malicious scripts into your webpage, which can execute when the modified content is rendered. You should at least sanitize the input before assigning it to the `.innerHTML` property.
     :::
-    Additionally, setting the `.innerHTML` property with a long HTML string can make your code harder to read and maintain. It is better to use DOM manipulation methods (see further) to create and modify HTML elements programmatically.
+    Additionally, setting the `.innerHTML` property with a long HTML string can make your code **harder to read and maintain**. It is better to use DOM manipulation methods (see further) to create and modify HTML elements programmatically.
 
-* `.value`: is used for input fields (e.g. `<input>`, `<textarea>`, ...). It retrieves the user input of the field or sets a value to the field .
+* `.value`: is used for input fields (e.g. `<input>`, `<textarea>`, ...). It retrieves the user input of the field or sets a value to the field.
 
 #### Reading content
 
@@ -575,11 +575,13 @@ Note: instead of creating a separate variable to store the element selection and
 const text = document.getElementById("p1").textContent; // Reading
 document.getElementById("p1").textContent = "Content"; // Writing
 ```
-However, you must ensure that `document.getElementById("p1")` is never *null* (which happens if the element is not found). Attempting to apply a property to a *null* element will result in an error causing the rest of the code to stop executing!
+However, you must ensure that `document.getElementById("p1")` is never *null* (which happens if the element is not found)! Attempting to apply a property to a *null* element will result in an error causing the rest of the code to stop executing!
 
 #### Creating HTML elements using DOM manipulation methods
 
-The previously discussed properties are primarily intended for placing simple content within an element. But what if you want to dynamically add or remove HTML elements? For that, we have DOM manipulation methods.
+The previously discussed **properties are primarily intended for placing simple content (like text) within an element!** 
+
+But what if you want to **dynamically add or remove HTML elements?** For that, we have **DOM manipulation methods**.
 
 The following example will select the *div* element and then add two *p* elements below with text content and some attributes. The second *p* element will also contain an image:
 
