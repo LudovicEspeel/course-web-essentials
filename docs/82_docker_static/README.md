@@ -14,29 +14,33 @@ Please check if all your URL's are relative (HTML, CSS and JS) on your website.
 
 ### Create a GitHub repository for deployment
 
-Steps to take if you **do not have a repository yet**:
+Steps to take if you **already have a repository** (e.g. created via the assignment invitation link on Toledo) such as:
+```
+https://github.com/vives-brugge-web-essentials-20<xx>-20<yy>/project-1-<YourGitHubName>.git
+
+git@github.com:vives-brugge-web-essentials-20<xx>-20<yy>/project-1-<YourGitHubName>.git
+```
+
+1. Rework your folder structure: create below root folder `<project>` the subfolder `website`.
+   * In your case, `<project>` will be something like `<project-1-YourGitHubName>`.
+2. Put all your files in this subfolder. If needed, rename the HTML file to `index.html` to make it easier to access your website.
+3. Make a first push.
+
+Steps to take if you **do NOT have a repository yet and create everything from scratch**:
 
 1. Create a new repository on GitHub.
-2. Create a local folder `<project-name>` with a subfolder `website`
-3. Make a copy of your project to the folder `website`
-4. Open the folder `<project-name>` in Visual Code and open a terminal.
+2. Create a local folder `<project>` with a subfolder `website`.
+3. Put all your files in this subfolder. If needed, rename the HTML file to `index.html` to make it easier to access your website.
+4. Open the folder `<project>` in Visual Code and open a terminal.
 5. Make it a git repository by typing `git init`
 6. Add the remote GitHub repository by typing `git remote add origin git@github.com:yourGitHubUsername/repositoryname.git` (the last part is your SSH link from your GitHub repository).
 7. Make a first push.
-
-Steps to take if you **already have a repository** (e.g. created via an invitation link on Toledo):
-
-1. Do a `git clone <ssh-url>`
-2. In your cloned local folder, create a subfolder `website`
-3. Make a copy of your project to the folder `website`
-4. Open the folder `<project-name>` in Visual Code and open a terminal.
-5. Make a first push.
 
 ### Create a docker-compose file
 
 We will be deploying our website in a docker container, so the first thing we need to do is make a docker-compose file containing the information of how to deploy this project.
 
-Create a file `docker-compose.yml` in the folder  `<project-name>` with the following content:
+Create a file `docker-compose.yml` in the root folder  `<project>` with the following content:
 
 ``` yaml
 version: '3'
@@ -60,9 +64,9 @@ Now the preperation is ready, **push now everything to GitHub**.
 
 ## Clone and deploy your project in the VM
 
-1. Open a `powershell` and connect to your VM by the ssh command.
-2. Now you need to clone your docker repo, by using the https link of your GitHub repository: `git clone <https-link-repo>` (If you've already cloned the repository before, just use `git pull`).
-3. Go to your folder `<project-name>`
+1. Open a terminal and connect to your VM by the ssh command.
+2. Now you need to clone your docker repo, by using the https link of your GitHub repository: `git clone https://github.com/vives-brugge-web-essentials-20<xx>-20<yy>/project-1-<YourGitHubName>.git` (If you've already cloned the repository before, just use `git pull`).
+3. Go to your folder `<project>`
    * If you want to see the subfolders and files below a folder, use the command `ls`
    * Go to a subfolder using the command `cd <folder name>`
 4. The only thing left to do is deploying your website by starting the docker container.
@@ -71,4 +75,4 @@ Now the preperation is ready, **push now everything to GitHub**.
    * To view logs: `docker compose ps`
    * To view a list of the containers: `docker compose ls`
 
-Now everyone connected to the `devbit` network can access your website through its ip address.
+Now everyone connected to the `devbit` network can browse to your website via `http://<ip address>`.
