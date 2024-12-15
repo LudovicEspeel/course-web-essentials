@@ -16,13 +16,13 @@ Please check if all your URL's are relative (HTML, CSS and JS) on your website.
 
 Steps to take if you **already have a repository** (e.g. created via the assignment invitation link on Toledo) such as:
 ```
-https://github.com/vives-brugge-web-essentials-20<xx>-20<yy>/project-1-<YourGitHubName>.git
+https://github.com/vives-brugge-web-essentials-20<xx>-20<yy>/project-1-<GitHub-username>.git
 
-git@github.com:vives-brugge-web-essentials-20<xx>-20<yy>/project-1-<YourGitHubName>.git
+git@github.com:vives-brugge-web-essentials-20<xx>-20<yy>/project-1-<GitHub-username>.git
 ```
 
 1. Rework your folder structure: create below root folder `<project>` the subfolder `website`.
-   * In your case, `<project>` will be something like `<project-1-YourGitHubName>`.
+   * In your case, `<project>` will be something like `<project-1-GitHub-username>`.
 2. Put all your files in this subfolder. If needed, rename the HTML file to `index.html` to make it easier to access your website.
 3. Make a first push.
 
@@ -33,7 +33,7 @@ Steps to take if you **do NOT have a repository yet and create everything from s
 3. Put all your files in this subfolder. If needed, rename the HTML file to `index.html` to make it easier to access your website.
 4. Open the folder `<project>` in Visual Code and open a terminal.
 5. Make it a git repository by typing `git init`
-6. Add the remote GitHub repository by typing `git remote add origin git@github.com:yourGitHubUsername/repositoryname.git` (the last part is your SSH link from your GitHub repository).
+6. Add the remote GitHub repository by typing `git remote add origin git@github.com:GitHub-username/repositoryname.git` (the last part is your SSH link from your GitHub repository).
 7. Make a first push.
 
 ### Create a docker-compose file
@@ -65,7 +65,7 @@ Now the preperation is ready, **push now everything to GitHub**.
 ## Clone and deploy your project in the VM
 
 1. Open a terminal and connect to your VM by the ssh command.
-2. Now you need to clone your docker repo, by using the https link of your GitHub repository: `git clone https://github.com/vives-brugge-web-essentials-20<xx>-20<yy>/project-1-<YourGitHubName>.git` (If you've already cloned the repository before, just use `git pull`).
+2. Now you need to clone your docker repo, by using the https link of your GitHub repository: `git clone https://github.com/vives-brugge-web-essentials-20<xx>-20<yy>/project-1-<GitHub-username>.git` (If you've already cloned the repository before, just use `git pull`).
 3. Go to your folder `<project>`
    * If you want to see the subfolders and files below a folder, use the command `ls`
    * Go to a subfolder using the command `cd <folder name>`

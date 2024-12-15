@@ -60,7 +60,7 @@ Depending on how many students install Docker simultaneously, this can take a wh
 Please limit this to **6 students at the same time**.
 :::
 
-Next we need to add `<username>` to Docker.
+Next we need to add your username to Docker.
 
 ```bash
 sudo adduser <username> docker
