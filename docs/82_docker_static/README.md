@@ -74,5 +74,6 @@ Now the preperation is ready, **push now everything to GitHub**.
    * To stop: `docker compose down`
    * To view logs: `docker compose ps`
    * To view a list of the containers: `docker compose ls`
+   Note: if you get an error about permissions, add `sudo` before the command.
 
 Now everyone connected to the `devbit` network can browse to your website via `http://<ip address>`.
